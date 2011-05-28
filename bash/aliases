@@ -7,13 +7,10 @@ alias gst="git status"
 alias ga="git add"
 alias gb="git branch"
 alias gc="git commit -v"
-alias gca="git commit -v -a"
+alias gac="git commit -v -a"
 alias gd="git diff"
 alias go="git checkout"
 alias gk="gitk --all&"
-
-# Emacs
-alias cemacs="open -a Emacs.app"
 
 # Misc
 alias lf="ls -F"
