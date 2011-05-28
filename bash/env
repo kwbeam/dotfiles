@@ -13,7 +13,7 @@ PATH=/opt/local/bin:/opt/local/sbin:$PATH
 # ----------
 # Misc
 # ----------
-export JAVA_HOME=/usr
+export JAVA_HOME=/Library/Java/Home
 
 export EDITOR="emacsclient"
 
