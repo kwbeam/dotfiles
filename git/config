@@ -7,7 +7,7 @@
 	whitespace = nowarn
 [core]
 	autocrlf = input
-	safecrlf = true
+	safecrlf = false
 [alias]
         co = checkout
         ci = commit
