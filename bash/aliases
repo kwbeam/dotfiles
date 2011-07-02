@@ -15,7 +15,3 @@ alias gk="gitk --all&"
 # Misc
 alias lf="ls -F"
 alias ll="ls -al"
-
-# Slicehost
-alias sftp-feynman='sftp -oPort=33333 kevin@174.143.235.201'
-alias ssh-feynman='ssh -p 33333 kevin@174.143.235.201'
