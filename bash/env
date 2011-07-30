@@ -24,6 +24,11 @@ Darwin) export JAVA_HOME=/Library/Java/Home
 esac
 
 # ----------
+# TexLive
+# ----------
+PATH=/usr/local/texlive/2011/bin/i386-linux:$PATH
+
+# ----------
 # Misc
 # ----------
 export EDITOR="emacsclient"
