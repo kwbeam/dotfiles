@@ -9,10 +9,10 @@ To use this project:
 * Clone this repository in your home directory
 * Create these symlinks:
 
-    ln -s bash_profile ~/.bash_profile
-    ln -s bashrc ~/.bashrc
-    ln -s git/config ~/.gitconfig
-    ln -s git/ignore ~/.gitingore
+    `ln -s bash_profile ~/.bash_profile`
+    `ln -s bashrc ~/.bashrc`
+    `ln -s git/config ~/.gitconfig`
+    `ln -s git/ignore ~/.gitingore`
 
 Credit: the original idea for the contents of my dotfiles came from
 PeepCode's excellent screencasts [Meet the Command Line][1] and [Advanced
