@@ -43,4 +43,4 @@ GIT_PS1_SHOWSTASHSTATE="yes_please"
 GIT_PS1_SHOWUNTRACKEDFILES="yes_please"
 GIT_PS1_SHOWUPSTREAM="auto"
 
-PS1="\n\[\e[0;37m\]\w\[\e[0;32m\]$(__git_ps1 " (%s)") \[\e[0;31m\]$(~/.rvm/bin/rvm-prompt) \[\e[0;37m\]$ "
+PS1="\n\[\033[0;37m\]\w\[\033[0;32m\]\$(__git_ps1 \" (%s)\") \[\033[0;36m\]\[\033[0;31m\]\$(~/.rvm/bin/rvm-prompt) \$\[\033[00m\] "
