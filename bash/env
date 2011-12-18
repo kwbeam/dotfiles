@@ -7,7 +7,6 @@ PATH=$PATH:~/bin
 # Pre-PATH
 # ----------
 PATH=/usr/local/bin:/usr/local/sbin:$PATH
-
 PATH=/opt/local/bin:/opt/local/sbin:$PATH
 
 # ----------
@@ -22,11 +21,6 @@ Darwin) export JAVA_HOME=/Library/Java/Home
 *) echo "Unknown os"
    ;;
 esac
-
-# ----------
-# TexLive
-# ----------
-PATH=/usr/local/texlive/2011/bin/i386-linux:$PATH
 
 # ----------
 # Misc
