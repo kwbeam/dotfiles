@@ -43,4 +43,4 @@ GIT_PS1_SHOWSTASHSTATE="yes_please"
 GIT_PS1_SHOWUNTRACKEDFILES="yes_please"
 GIT_PS1_SHOWUPSTREAM="auto"
 
-PS1="\n\[$WHITE\]\w\[$GREEN\]\$(__git_ps1 \" (%s)\") \[$RED\]\$(~/.rvm/bin/rvm-prompt) \[$WHITE\]\$ "
+PS1="\n\[$WHITE\]\w\[$GREEN\]\$(__git_ps1) \[$RED\]\$(~/.rvm/bin/rvm-prompt) \[$WHITE\]\$ "
