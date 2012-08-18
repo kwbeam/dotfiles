@@ -22,7 +22,7 @@ Darwin) export JAVA_HOME=/Library/Java/Home
    ;;
 esac
 
-PATH=$PATH:$HOME/tools/maven/apache-maven-3.0.4/bin
+PATH=$HOME/tools/maven/apache-maven-3.0.4/bin:$PATH
 
 # ----------
 # Subversion
