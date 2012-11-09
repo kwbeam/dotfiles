@@ -14,6 +14,10 @@ PATH=/opt/local/bin:/opt/local/sbin:$PATH
 # ----------
 PATH=/usr/local/share/python:$PATH
 
+# virtual and virtualenvwrapper
+export WORKON_HOME=~/.virtual_envs
+. ~/.virtual_envs/default/bin/virtualenvwrapper.sh
+
 # ----------
 # Java
 # ----------
