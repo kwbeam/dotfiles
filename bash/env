@@ -12,30 +12,8 @@ PATH=/opt/local/bin:/opt/local/sbin:$PATH
 # ----------
 # Python
 # ----------
-PATH=/usr/local/share/python:$PATH
-
 # virtualenv - use the default env
 . ~/.virtual_envs/default/bin/activate
-
-# ----------
-# Java
-# ----------
-osname=`uname`
-case $osname in
-Linux) export JAVA_HOME=/usr/lib/jvm/java-6-openjdk
-       ;;
-Darwin) export JAVA_HOME=/Library/Java/Home
-        ;;
-*) echo "Unknown os"
-   ;;
-esac
-
-PATH=$HOME/tools/maven/apache-maven-3.0.4/bin:$PATH
-
-# ----------
-# Subversion
-# ----------
-PATH=/opt/subversion/bin:$PATH
 
 # ----------
 # Misc
