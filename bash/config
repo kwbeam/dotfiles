@@ -25,4 +25,4 @@ GIT_PS1_SHOWSTASHSTATE="yes_please"
 GIT_PS1_SHOWUNTRACKEDFILES="yes_please"
 GIT_PS1_SHOWUPSTREAM="auto"
 
-PS1="\n\[$WHITE\]\w\[$GREEN\]\$(__git_ps1) \[$WHITE\]\$ "
+PS1="\n\[$BLUE\](\u@\h) \[$WHITE\]\w\[$GREEN\]\$(__git_ps1) \[$WHITE\]\$ "

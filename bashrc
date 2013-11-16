@@ -1,15 +1,17 @@
 . ~/bin/dotfiles/git/git-completion.bash
 . ~/bin/dotfiles/git/git-prompt.sh
 
-hostname=`hostname`
+# Common bash env
+. ~/bin/dotfiles/bash/env
 
+# Hostname-specific bash env
+hostname=`hostname`
 if [ -f ~/bin/dotfiles/bash/env.$hostname ];
 then
-  env_filename=~/bin/dotfiles/bash/env.$hostname
+  . ~/bin/dotfiles/bash/env.$hostname
 else
-  env_filename=~/bin/dotfiles/bash/env
+  . ~/bin/dotfiles/bash/env.generic
 fi
 
-. $env_filename
 . ~/bin/dotfiles/bash/config
 . ~/bin/dotfiles/bash/aliases
