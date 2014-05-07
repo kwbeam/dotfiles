@@ -1,5 +1,7 @@
-. ~/bin/dotfiles/git/git-completion.bash
-. ~/bin/dotfiles/git/git-prompt.sh
+# Setup homebrew bash completion
+if [ -f $(brew --prefix)/etc/bash_completion ]; then
+  . $(brew --prefix)/etc/bash_completion
+fi
 
 # Common bash env
 . ~/bin/dotfiles/bash/env
