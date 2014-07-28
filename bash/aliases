@@ -1,3 +1,4 @@
 # Misc
 alias lf="ls -F"
 alias ll="ls -al"
+alias be="bundle exec"
