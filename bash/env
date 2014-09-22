@@ -8,4 +8,10 @@ PATH=$PATH:~/bin
 # ----------
 export EDITOR="emacsclient"
 
+# ----------
+# Julia, the language
+# ----------
+export JULIA_HOME=/Applications/Julia-0.3.0.app/Contents/Resources/julia/bin
+PATH=$PATH:$JULIA_HOME
+
 export PATH
