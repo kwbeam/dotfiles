@@ -7,6 +7,7 @@ PATH=$PATH:~/bin
 # Misc
 # ----------
 export EDITOR="emacsclient"
+export TERM=xterm-256color
 
 # ----------
 # Julia, the language
