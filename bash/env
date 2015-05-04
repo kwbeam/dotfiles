@@ -10,9 +10,11 @@ export EDITOR="emacsclient"
 export TERM=xterm-256color
 
 # ----------
-# Julia, the language
+# Ruby
 # ----------
-export JULIA_HOME=/Applications/Julia-0.3.2.app/Contents/Resources/julia/bin
-PATH=$PATH:$JULIA_HOME
+if [ -d "$HOME/.rbenv" ]; then
+  export PATH="$HOME/.rbenv/bin:$PATH"
+  eval "$(rbenv init -)"
+fi
 
 export PATH

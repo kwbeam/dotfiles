@@ -10,11 +10,11 @@ fi
 # Common bash env
 . ~/bin/dotfiles/bash/env
 
-# Hostname-specific bash env
-hostname=`hostname`
-if [ -f ~/bin/dotfiles/bash/env.$hostname ];
+# User-specific bash env
+whoami=`whoami`
+if [ -f ~/bin/dotfiles/bash/env.$whoami ];
 then
-  . ~/bin/dotfiles/bash/env.$hostname
+  . ~/bin/dotfiles/bash/env.$whoami
 else
   . ~/bin/dotfiles/bash/env.generic
 fi
