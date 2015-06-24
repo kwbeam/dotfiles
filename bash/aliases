@@ -6,3 +6,4 @@ alias enw="emacs -nw"
 alias ecnw="emacsclient -nw"
 function vnssh { vagrant nsidc ssh --env=$1; }
 export -f vnssh
+alias b2drestart="boot2docker ssh sudo /etc/init.d/docker restart"
