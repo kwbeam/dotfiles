@@ -4,6 +4,4 @@ alias ll="ls -al"
 alias be="bundle exec"
 alias enw="emacs -nw"
 alias ecnw="emacsclient -nw"
-function vnssh { vagrant nsidc ssh --env=$1; }
-export -f vnssh
-alias npm-exec='PATH=$(npm bin):$PATH'
+alias nex='PATH=$(npm bin):$PATH'
