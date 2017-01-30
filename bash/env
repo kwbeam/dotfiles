@@ -21,12 +21,4 @@ export NVM_DIR="$HOME/.nvm"
 # ----------
 eval "$(stack --bash-completion-script stack)"
 
-# ----------
-# Ruby
-# ----------
-if [ -d "$HOME/.rbenv" ]; then
-  export PATH="$HOME/.rbenv/bin:$PATH"
-  eval "$(rbenv init -)"
-fi
-
 export PATH
