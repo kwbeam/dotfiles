@@ -20,5 +20,12 @@ export NVM_DIR="$HOME/.nvm"
 # Haskell Stack
 # ----------
 eval "$(stack --bash-completion-script stack)"
+PATH=$PATH:$HOME/.local/bin
 
+# ----------
+# Ruby
+# ----------
+PATH=$PATH:$HOME/.rbenv/bin
+
+PATH=~/bin:$PATH
 export PATH
