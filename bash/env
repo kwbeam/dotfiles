@@ -12,6 +12,8 @@ export PATH="$PYENV_ROOT/bin:$PATH"
 eval "$(pyenv init -)"
 . $(pyenv root)/completions/pyenv.bash
 
+eval "$(pipenv --completion)"
+
 # ----------
 # Node Version Manager - nvm
 # ----------
