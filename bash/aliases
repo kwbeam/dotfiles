@@ -1,5 +1,0 @@
-# Misc
-alias lf="ls -F"
-alias ll="ls -al"
-alias enw="emacs -nw"
-alias ecnw="emacsclient -nw"

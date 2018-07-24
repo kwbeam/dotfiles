@@ -1,22 +1,17 @@
 Dotfiles
 ========
 
-This project contains all my shell dotfiles, environment con fig,
+This project contains important shell dotfiles, environment config,
 aliases, git config, etc, that I want to keep across machines.  
 
 To use this project:
 
-* Clone this repository in your home directory
-* Create these symlinks:
+* Clone this repository.
+* Create symlinks:
 
-    * `$ ln -s bash_profile ~/.bash_profile`
-    * `$ ln -s bashrc ~/.bashrc`
-    * `$ ln -s git/config ~/.gitconfig`
-    * `$ ln -s git/ignore ~/.gitingore`
-
-Credit: the original idea for the contents of my dotfiles came from
-PeepCode's excellent screencasts [Meet the Command Line][1] and [Advanced
-Command Line][2].
-
-[1]: https://peepcode.com/products/meet-the-command-line
-[2]: https://peepcode.com/products/advanced-command-line
+    * `$ ln -s ~/projects/dotfiles/bash_profile ~/.bash_profile`
+    * `$ ln -s ~/projects/dotfiles/bashrc ~/.bashrc`
+    * `$ ln -s ~/projects/dotfiles/vimrc ~/.vimrc`
+    * `$ ln -s ~/projects/dotfiles/tmux.conf ~/.tmux.conf`
+    * `$ ln -s ~/projects/dotfiles/gitconfig ~/.gitconfig`
+    * `$ ln -s ~/projects/dotfiles/gitignore ~/.gitingore`
