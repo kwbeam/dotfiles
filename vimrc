@@ -67,7 +67,9 @@ call minpac#add('k-takata/minpac', {'type':'opt'})
 call minpac#add('arcticicestudio/nord-vim')
 call minpac#add('vim-airline/vim-airline')
 call minpac#add('scrooloose/nerdtree')
-call minpac#add('sheerun/vim-polyglot')
+" call minpac#add('sheerun/vim-polyglot')
+call minpac#add('leafgarland/typescript-vim')
+call minpac#add('Quramy/tsuquyomi')
 
 colorscheme nord
 
