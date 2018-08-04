@@ -3,7 +3,7 @@
 # ----------
 # Misc
 # ----------
-export EDITOR="emacsclient"
+export EDITOR="vim"
 export TERM=tmux-256color
 
 # ----------
@@ -41,6 +41,8 @@ alias lf="ls -F"
 alias ll="ls -al"
 alias enw="emacs -nw"
 alias ecnw="emacsclient -nw"
+alias arl="autorandr -l laptop"
+alias arm="autorandr -l monitor"
 
 # Colors from http://wiki.archlinux.org/index.php/Color_Bash_Prompt
 # misc
