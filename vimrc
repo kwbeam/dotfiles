@@ -8,6 +8,10 @@ call minpac#add('tpope/vim-sensible')
 set number
 set nobackup
 set hlsearch
+set expandtab
+set softtabstop=2
+set shiftwidth=2
+set shiftround
 
 " Basic color scheme and status line stuff
 call minpac#add('itchyny/lightline.vim')
