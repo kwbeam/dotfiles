@@ -1,20 +1,18 @@
-syntax on
-filetype plugin indent on
-set autoindent
-set number
-set nobackup
-set hlsearch
-packadd matchit
-
 " Use minpac to manage packages (and itself!)
 packadd minpac
 call minpac#init()
 call minpac#add('k-takata/minpac', {'type':'opt'})
 
+" Defaults, please
+call minpac#add('tpope/vim-sensible')
+set number
+set nobackup
+set hlsearch
+
 " Basic color scheme and status line stuff
 call minpac#add('itchyny/lightline.vim')
 let g:lightline = {
-      \ 'colorscheme': 'one',
+      \ 'colorscheme': 'wombat',
       \ }
 
 call minpac#add('arcticicestudio/nord-vim')
@@ -25,10 +23,16 @@ call minpac#add('scrooloose/nerdtree')
 set laststatus=2
 map <C-n> :NERDTreeToggle<CR>
 
-" Languages
-" Everything
-" call minpac#add('sheerun/vim-polyglot')
-"
+" Cross-language plugins
+call minpac#add('w0rp/ale')
+
+call minpac#add('janko-m/vim-test')
+nmap <silent> t<C-n> :TestNearest<CR>
+nmap <silent> t<C-f> :TestFile<CR>
+nmap <silent> t<C-s> :TestSuite<CR>
+nmap <silent> t<C-l> :TestLast<CR>
+nmap <silent> t<C-g> :TestVisit<CR>
+
 " TypeScript
 call minpac#add('leafgarland/typescript-vim')
 call minpac#add('Quramy/tsuquyomi')
