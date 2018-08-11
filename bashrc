@@ -3,6 +3,7 @@
 # ----------
 # Misc
 # ----------
+set -o vi
 export EDITOR="vim"
 export TERM=tmux-256color
 
