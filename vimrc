@@ -37,6 +37,30 @@ nmap <silent> t<C-s> :TestSuite<CR>
 nmap <silent> t<C-l> :TestLast<CR>
 nmap <silent> t<C-g> :TestVisit<CR>
 
+" Elm
+call minpac#add('ElmCast/elm-vim')
+let g:elm_format_autosave = 1
+
+" Elixir
+call minpac#add('elixir-editors/vim-elixir')
+
+" Haskell
+" None
+
+" JavaScript
+" None
+
+" PureScript
+call minpac#add('purescript-contrib/purescript-vim')
+call minpac#add('FrigoEU/psc-ice-vim')
+let purescript_indent_if = 3
+let purescript_indent_case = 5
+let purescript_indent_let = 4
+let purescript_indent_where = 6
+let purescript_indent_do = 3
+let purescript_indent_in = 1
+let purescript_indent_dot = v:true
+
 " TypeScript
 call minpac#add('leafgarland/typescript-vim')
 call minpac#add('Quramy/tsuquyomi')
