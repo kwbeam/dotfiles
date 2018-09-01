@@ -1,0 +1,11 @@
+command emacs emacs
+command term "xterm"
+command firefox firefox
+command thunderbird thunderbird
+command keepassx keepassx
+
+bind M-period unmap
+bind CM-period ssh
+
+bind C-slash unmap
+bind CM-slash menusearch
