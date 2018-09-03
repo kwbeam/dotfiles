@@ -3,8 +3,8 @@
 # ----------
 # Misc
 # ----------
-set -o vi
-export EDITOR="vim"
+set -o emacs
+export EDITOR="emacsclient"
 export TERM=tmux-256color
 
 # ----------
@@ -44,6 +44,7 @@ alias enw="emacs -nw"
 alias ecnw="emacsclient -nw"
 alias arl="autorandr -l laptop"
 alias arm="autorandr -l monitor"
+alias wrc="sudo nmcli device disconnect wlan0; sudo nmcli device connect wlan0"
 
 # Colors from http://wiki.archlinux.org/index.php/Color_Bash_Prompt
 # misc
