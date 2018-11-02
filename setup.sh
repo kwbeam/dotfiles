@@ -8,3 +8,4 @@ ln -s ~/projects/dotfiles/vimrc ~/.vimrc
 ln -s ~/projects/dotfiles/tmux.conf ~/.tmux.conf
 ln -s ~/projects/dotfiles/gitconfig ~/.gitconfig
 ln -s ~/projects/dotfiles/gitignore ~/.gitingore
+ln -s ~/projects/dotfiles/Xresources ~/.Xresources
