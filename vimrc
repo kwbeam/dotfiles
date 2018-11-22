@@ -1,3 +1,4 @@
+set t_Co=256
 " Use minpac to manage packages (and itself!)
 packadd minpac
 call minpac#init()
@@ -13,19 +14,28 @@ set softtabstop=2
 set shiftwidth=2
 set shiftround
 
+" Sync with clipboard
+set clipboard^=unnamed
+
+" Use color schemes in the terminal
+call minpac#add('godlygeek/csapprox')
+
 " Basic color scheme and status line stuff
 call minpac#add('itchyny/lightline.vim')
 let g:lightline = {
       \ 'colorscheme': 'wombat',
       \ }
 
-call minpac#add('arcticicestudio/nord-vim')
-colorscheme nord
+call minpac#add('gosukiwi/vim-atom-dark')
+colorscheme atom-dark
 
 " Use NERDTree
 call minpac#add('scrooloose/nerdtree')
 set laststatus=2
 map <C-n> :NERDTreeToggle<CR>
+
+" git
+call minpac#add('airblade/vim-gitgutter')
 
 " Cross-language plugins
 call minpac#add('w0rp/ale')
@@ -41,25 +51,11 @@ nmap <silent> t<C-g> :TestVisit<CR>
 call minpac#add('ElmCast/elm-vim')
 let g:elm_format_autosave = 1
 
-" Elixir
-call minpac#add('elixir-editors/vim-elixir')
-
-" Haskell
-" None
-
-" JavaScript
-" None
-
-" PureScript
-call minpac#add('purescript-contrib/purescript-vim')
-call minpac#add('FrigoEU/psc-ice-vim')
-let purescript_indent_if = 3
-let purescript_indent_case = 5
-let purescript_indent_let = 4
-let purescript_indent_where = 6
-let purescript_indent_do = 3
-let purescript_indent_in = 1
-let purescript_indent_dot = v:true
+" ReasonML
+call minpac#add('reasonml-editor/vim-reason-plus')
+let g:LanguageClient_serverCommands = {
+    \ 'reason': ['/home/kbeam/tools/reasonml/reason-language-server/reason-language-server.exe']
+    \ }
 
 " TypeScript
 call minpac#add('leafgarland/typescript-vim')
