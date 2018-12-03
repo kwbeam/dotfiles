@@ -51,12 +51,6 @@ nmap <silent> t<C-g> :TestVisit<CR>
 call minpac#add('ElmCast/elm-vim')
 let g:elm_format_autosave = 1
 
-" ReasonML
-call minpac#add('reasonml-editor/vim-reason-plus')
-let g:LanguageClient_serverCommands = {
-    \ 'reason': ['/home/kbeam/tools/reasonml/reason-language-server/reason-language-server.exe']
-    \ }
-
 " TypeScript
 call minpac#add('leafgarland/typescript-vim')
 call minpac#add('Quramy/tsuquyomi')
