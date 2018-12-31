@@ -1,11 +1,17 @@
 #!/bin/bash
 
-ln -s ~/projects/dotfiles/bash_profile ~/.bash_profile
-ln -s ~/projects/dotfiles/bashrc ~/.bashrc
-ln -s ~/projects/dotfiles/inputrc ~/.inputrc
-ln -s ~/projects/dotfiles/cwmrc ~/.cwmrc
-ln -s ~/projects/dotfiles/vimrc ~/.vimrc
-ln -s ~/projects/dotfiles/tmux.conf ~/.tmux.conf
-ln -s ~/projects/dotfiles/gitconfig ~/.gitconfig
-ln -s ~/projects/dotfiles/gitignore ~/.gitingore
-ln -s ~/projects/dotfiles/Xresources ~/.Xresources
+declare -a files=("bash_profile" "bashrc" "inputrc" "cwmrc" "vimrc" "tmux.conf" "gitconfig" "gitignore" "Xresources")
+
+for f in "${files[@]}"
+do
+  echo "-------------------------------------------------------------------"
+  echo "$f => ~/.$f"
+  if [ -f ~/.$f ]; then
+	echo "Creating backup copy and removing file ~/.$f"
+  	cp ~/.$f ~/.$f.bak
+  	rm ~/.$f
+  fi
+
+  "Creating softlink to ~/projects/dotfiles/$f"
+  ln -s ~/projects/dotfiles/$f ~/.$f
+done

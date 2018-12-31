@@ -18,7 +18,7 @@ URxvt*depth: 32
 URxvt*font:  xft:inconsolata:size=10:antialias=true
 URxvt*geometry: 120x40
 URxvt*loginShell: true
-URxvt*saveLines: 5000
+URxvt*saveLines: 8192
 URxvt*scrollBar: false
 URxvt*secondaryScroll:  true    # Enable Shift-PageUp/Down in screen
 

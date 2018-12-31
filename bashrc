@@ -3,17 +3,17 @@
 # ----------
 # Misc
 # ----------
-set -o emacs
-export EDITOR="emacsclient"
+set -o vi
+export EDITOR="vim"
 export TERM=tmux-256color
 
 # ----------
 # Python
 # ----------
-export PYENV_ROOT="$HOME/.pyenv"
-export PATH="$PYENV_ROOT/bin:$PATH"
-eval "$(pyenv init -)"
-. $(pyenv root)/completions/pyenv.bash
+#export PYENV_ROOT="$HOME/.pyenv"
+#export PATH="$PYENV_ROOT/bin:$PATH"
+#eval "$(pyenv init -)"
+#. $(pyenv root)/completions/pyenv.bash
 # Don't use this right now -- slow
 #eval "$(pipenv --completion)"
 
@@ -25,6 +25,11 @@ export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"
 # Don't use this right now -- slow
 #[[ -r $NVM_DIR/bash_completion ]] && . $NVM_DIR/bash_completion
+
+# ----------
+# Rust
+# ----------
+PATH=$PATH:"$HOME/.cargo/bin"
 
 # ----------
 # Arduino
@@ -40,8 +45,8 @@ export PATH
 # ----------
 alias lf="ls -F"
 alias ll="ls -al"
-alias enw="emacs -nw"
-alias ecnw="emacsclient -nw"
+# alias enw="emacs -nw"
+# alias ecnw="emacsclient -nw"
 alias arl="autorandr -l laptop"
 alias arm="autorandr -l monitor"
 alias wrc="sudo nmcli device disconnect wlan0; sudo nmcli device connect wlan0"
