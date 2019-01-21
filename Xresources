@@ -1,10 +1,14 @@
-! Xft.dpi:        96
-! Xft.antialias:  true
-! Xft.rgba:       rgb
-! Xft.hinting:    true
-! Xft.hintstyle:  hintfull
-! Xft.autohint:   true
-! Xft.lcdfilter:  lcddefault
+! Laptop
+!xft.dip:        90
+! Samsung
+Xft.dpi:        110
+
+Xft.antialias:  true
+Xft.rgba:       rgb
+Xft.hinting:    true
+Xft.hintstyle:  hintfull
+Xft.autohint:   true
+Xft.lcdfilter:  lcddefault
 
 ! xterm
 xterm*faceName: xft:Inconsolata:style=Regular
@@ -15,7 +19,7 @@ URxvt*borderless: 1
 URxvt*buffered: true
 URxvt*cursorBlink: true
 URxvt*depth: 32
-URxvt*font:  xft:inconsolata:size=10:antialias=true
+URxvt*font:  xft:inconsolata:size=12:antialias=true
 URxvt*geometry: 120x40
 URxvt*loginShell: true
 URxvt*saveLines: 8192
