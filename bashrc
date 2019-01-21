@@ -3,39 +3,37 @@
 # ----------
 # Misc
 # ----------
-set -o vi
-export EDITOR="vim"
+set -o emacs
+export EDITOR="emacsclient"
 export TERM=tmux-256color
 
 # ----------
 # Python
 # ----------
-#export PYENV_ROOT="$HOME/.pyenv"
-#export PATH="$PYENV_ROOT/bin:$PATH"
-#eval "$(pyenv init -)"
-#. $(pyenv root)/completions/pyenv.bash
-# Don't use this right now -- slow
-#eval "$(pipenv --completion)"
+# added by Miniconda3 4.5.12 installer
+# >>> conda init >>>
+# !! Contents within this block are managed by 'conda init' !!
+__conda_setup="$(CONDA_REPORT_ERRORS=false '/home/w0hrk/miniconda3/bin/conda' shell.bash hook 2> /dev/null)"
+if [ $? -eq 0 ]; then
+    \eval "$__conda_setup"
+else
+    if [ -f "/home/w0hrk/miniconda3/etc/profile.d/conda.sh" ]; then
+        . "/home/w0hrk/miniconda3/etc/profile.d/conda.sh"
+        CONDA_CHANGEPS1=false conda activate base
+    else
+        \export PATH="/home/w0hrk/miniconda3/bin:$PATH"
+    fi
+fi
+unset __conda_setup
+# <<< conda init <<<
 
 # ----------
 # Node Version Manager - nvm
 # ----------
 export NVM_DIR="$HOME/.nvm"
-# This is slow. Is there a way I can append --no-use and still have Emacs stuff work?
 [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"
-# Don't use this right now -- slow
-#[[ -r $NVM_DIR/bash_completion ]] && . $NVM_DIR/bash_completion
+[[ -r $NVM_DIR/bash_completion ]] && . $NVM_DIR/bash_completion
 
-# ----------
-# Rust
-# ----------
-PATH=$PATH:"$HOME/.cargo/bin"
-
-# ----------
-# Arduino
-# ----------
-export ARDUINO_PATH=/usr/local/arduino
-PATH=$PATH:$ARDUINO_PATH
 
 PATH=~/.local/bin:~/bin:$PATH
 export PATH
@@ -45,8 +43,6 @@ export PATH
 # ----------
 alias lf="ls -F"
 alias ll="ls -al"
-# alias enw="emacs -nw"
-# alias ecnw="emacsclient -nw"
 alias arl="autorandr -l laptop"
 alias arm="autorandr -l monitor"
 alias wrc="sudo nmcli device disconnect wlan0; sudo nmcli device connect wlan0"
@@ -77,5 +73,3 @@ GIT_PS1_SHOWDIRTYSTATE="yes_please"
 GIT_PS1_SHOWSTASHSTATE="yes_please"
 GIT_PS1_SHOWUNTRACKEDFILES="yes_please"
 GIT_PS1_SHOWUPSTREAM="auto"
-
-#PS1="\[$BLUE\](\u@\h) \[$GREEN\]\w \[$BLUE\]\$ "
