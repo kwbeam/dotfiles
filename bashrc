@@ -10,13 +10,6 @@ export TERM=tmux-256color
 # ----------
 # Python
 # ----------
-# pyenv
-export PYENV_ROOT="$HOME/.pyenv"
-PATH="$PYENV_ROOT/bin:$PATH"
-if command -v pyenv 1>/dev/null 2>&1; then
-  eval "$(pyenv init -)"
-fi
-
 # added by Miniconda3 4.5.12 installer
 # >>> conda init >>>
 # !! Contents within this block are managed by 'conda init' !!
@@ -28,7 +21,7 @@ else
         . "/home/w0hrk/miniconda3/etc/profile.d/conda.sh"
         CONDA_CHANGEPS1=false conda activate base
     else
-        \PATH="/home/w0hrk/miniconda3/bin:$PATH"
+        \export PATH="/home/w0hrk/miniconda3/bin:$PATH"
     fi
 fi
 unset __conda_setup
