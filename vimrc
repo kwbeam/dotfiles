@@ -26,8 +26,8 @@ let g:lightline = {
       \ 'colorscheme': 'wombat',
       \ }
 
-call minpac#add('gosukiwi/vim-atom-dark')
-colorscheme atom-dark
+call minpac#add('chriskempson/vim-tomorrow-theme')
+colorscheme Tomorrow-Night-Eighties
 
 " Use NERDTree
 call minpac#add('scrooloose/nerdtree')
