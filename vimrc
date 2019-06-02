@@ -27,7 +27,7 @@ let g:lightline = {
       \ }
 
 call minpac#add('chriskempson/vim-tomorrow-theme')
-colorscheme Tomorrow-Night-Eighties
+colorscheme Tomorrow-Night-Bright
 
 " Use NERDTree
 call minpac#add('scrooloose/nerdtree')
