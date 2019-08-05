@@ -29,11 +29,6 @@ let g:lightline = {
 call minpac#add('chriskempson/vim-tomorrow-theme')
 colorscheme Tomorrow-Night-Bright
 
-" Use NERDTree
-call minpac#add('scrooloose/nerdtree')
-set laststatus=2
-map <C-n> :NERDTreeToggle<CR>
-
 " git
 call minpac#add('airblade/vim-gitgutter')
 
@@ -46,10 +41,6 @@ nmap <silent> t<C-f> :TestFile<CR>
 nmap <silent> t<C-s> :TestSuite<CR>
 nmap <silent> t<C-l> :TestLast<CR>
 nmap <silent> t<C-g> :TestVisit<CR>
-
-" Elm
-call minpac#add('ElmCast/elm-vim')
-let g:elm_format_autosave = 1
 
 " TypeScript
 call minpac#add('leafgarland/typescript-vim')
