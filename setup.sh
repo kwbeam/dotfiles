@@ -1,6 +1,6 @@
 #!/bin/bash
 
-declare -a files=("bash_profile" "bashrc" "inputrc" "cwmrc" "vimrc" "tmux.conf" "gitconfig" "gitignore" "Xresources", "zshrc", "zshenv")
+declare -a files=("bash_profile" "bashrc" "inputrc" "cwmrc" "vimrc" "tmux.conf" "gitconfig" "gitignore" "Xresources" "zshrc" "zshenv")
 
 for f in "${files[@]}"
 do
