@@ -3,6 +3,7 @@ set t_Co=256
 packadd minpac
 call minpac#init()
 call minpac#add('k-takata/minpac', {'type':'opt'})
+packloadall
 
 " Defaults, please
 call minpac#add('tpope/vim-sensible')
@@ -30,18 +31,40 @@ call minpac#add('chriskempson/vim-tomorrow-theme')
 colorscheme Tomorrow-Night-Bright
 
 " git
+call minpac#add('tpope/vim-fugitive')
 call minpac#add('airblade/vim-gitgutter')
 
-" Cross-language plugins
-call minpac#add('w0rp/ale')
+" Language Server Experiments
 
-call minpac#add('janko-m/vim-test')
-nmap <silent> t<C-n> :TestNearest<CR>
-nmap <silent> t<C-f> :TestFile<CR>
-nmap <silent> t<C-s> :TestSuite<CR>
-nmap <silent> t<C-l> :TestLast<CR>
-nmap <silent> t<C-g> :TestVisit<CR>
+" call minpac#add('janko-m/vim-test')
+" nmap <silent> t<C-n> :TestNearest<CR>
+" nmap <silent> t<C-f> :TestFile<CR>
+" nmap <silent> t<C-s> :TestSuite<CR>
+" nmap <silent> t<C-l> :TestLast<CR>
+" nmap <silent> t<C-g> :TestVisit<CR>
+
+" call minpac#add('purescript-contrib/haskell-vim')
+" call minpac#add('pangloss/vim-javascript')
+" call minpac#add('purescript-contrib/purescript-vim')
 
 " TypeScript
-call minpac#add('leafgarland/typescript-vim')
-call minpac#add('Quramy/tsuquyomi')
+" call minpac#add('leafgarland/typescript-vim')
+" call minpac#add('Quramy/tsuquyomi')
+
+" Candidates
+" https://vimawesome.com/plugin/surround-vim
+" 'tpope/vim-surround'
+" https://vimawesome.com/plugin/nerdtree-red
+" 'scrooloose/nerdtree'
+" https://vimawesome.com/plugin/ctrlp-vim-red
+" 'kien/ctrlp.vim'
+" https://vimawesome.com/plugin/vim-javascript
+" 'pangloss/vim-javascript'
+" https://vimawesome.com/plugin/vim-multiple-cursors
+" 'terryma/vim-multiple-cursors'
+" https://vimawesome.com/plugin/vim-jsx
+" 'mxw/vim-jsx'
+" https://vimawesome.com/plugin/vim-polyglot
+" 'sheerun/vim-polyglot'
+" https://vimawesome.com/plugin/html5-vim
+" 'othree/html5.vim'

@@ -5,11 +5,9 @@ set -o emacs
 export EDITOR="emacsclient"
 
 # ----------
-# Python
+# Julia
 # ----------
-# conda is installed via apt:
-#   https://www.anaconda.com/rpm-and-debian-repositories-for-miniconda/
-source /opt/conda/etc/profile.d/conda.sh
+PATH=$PATH:~/tools/julia/julia-1.2.0/bin
 
 # ----------
 # Node Version Manager - nvm
@@ -17,6 +15,13 @@ source /opt/conda/etc/profile.d/conda.sh
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"
 [[ -r $NVM_DIR/bash_completion ]] && . $NVM_DIR/bash_completion
+
+# ----------
+# Python
+# ----------
+# conda is installed via apt:
+#   https://www.anaconda.com/rpm-and-debian-repositories-for-miniconda/
+source /opt/conda/etc/profile.d/conda.sh
 
 # ----------
 # Rust
