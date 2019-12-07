@@ -21,14 +21,11 @@ set clipboard^=unnamed
 " Use color schemes in the terminal
 call minpac#add('godlygeek/csapprox')
 
-" Basic color scheme and status line stuff
-call minpac#add('itchyny/lightline.vim')
-let g:lightline = {
-      \ 'colorscheme': 'wombat',
-      \ }
-
-call minpac#add('chriskempson/vim-tomorrow-theme')
-colorscheme Tomorrow-Night-Bright
+call minpac#add('chriskempson/base16-vim')
+if filereadable(expand("~/.vimrc_background"))
+  let base16colorspace=256
+  source ~/.vimrc_background
+endif
 
 " git
 call minpac#add('tpope/vim-fugitive')
@@ -68,3 +65,9 @@ call minpac#add('airblade/vim-gitgutter')
 " 'sheerun/vim-polyglot'
 " https://vimawesome.com/plugin/html5-vim
 " 'othree/html5.vim'
+" Basic color scheme and status line stuff
+" call minpac#add('itchyny/lightline.vim')
+" let g:lightline = {
+"       \ 'colorscheme': 'wombat',
+"       \ }
+
