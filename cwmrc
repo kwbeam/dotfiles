@@ -1,4 +1,4 @@
-command term "xfce4-terminal"
+command term "xfce4-terminal --hide-scrollbar"
 command firefox firefox
 command thunderbird thunderbird
 command keepassx keepassx
