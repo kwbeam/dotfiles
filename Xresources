@@ -1,7 +1,9 @@
 ! Laptop
 ! Xft.dpi:        131
+Xft.dpi: 132
+
 ! Dell Monitor
-Xft.dpi:        92
+! Xft.dpi:        92
 
 Xft.antialias:  true
 Xft.rgba:       rgb

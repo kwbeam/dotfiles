@@ -1,12 +1,15 @@
-Dotfiles
-========
+# Dotfiles
 
 This project contains important shell dotfiles, environment config,
-aliases, git config, etc, that I want to keep across machines.  
+aliases, git config, etc, that I want to keep across machines.
 
-To use this project:
+# Install & Setup
 
-* Clone this repository.
+* Clone this repository:
+
+`$ mkdir -p ~/projects; cd projects`
+`$ git clone ...`
+
 * Create symlinks:
 
-`$ ./setup.sh`
+`$ cd dotfiles; ./setup.sh`
