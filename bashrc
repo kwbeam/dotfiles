@@ -1,5 +1,5 @@
 # ----------
-# Misc
+# Shell
 # ----------
 . /etc/bash_completion
 
@@ -15,10 +15,10 @@ export EDITOR="emacsclient"
 alias lf="ls -F"
 alias ll="ls -al"
 
-# GIT_PS1_SHOWDIRTYSTATE="yes_please"
-# GIT_PS1_SHOWSTASHSTATE="yes_please"
-# GIT_PS1_SHOWUNTRACKEDFILES="yes_please"
-# GIT_PS1_SHOWUPSTREAM="auto"
+GIT_PS1_SHOWDIRTYSTATE="yes_please"
+GIT_PS1_SHOWSTASHSTATE="yes_please"
+GIT_PS1_SHOWUNTRACKEDFILES="yes_please"
+GIT_PS1_SHOWUPSTREAM="auto"
 
 # ----------
 # Julia
@@ -30,7 +30,7 @@ PATH=$PATH:~/tools/julia/julia-1.2.0/bin
 # ----------
 # conda is installed via apt:
 #   https://www.anaconda.com/rpm-and-debian-repositories-for-miniconda/
-# source /opt/conda/etc/profile.d/conda.sh
+source /opt/conda/etc/profile.d/conda.sh
 
 # ----------
 # Node Version Manager - nvm
