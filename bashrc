@@ -42,7 +42,13 @@ export NVM_DIR="$HOME/.nvm"
 # ----------
 # Rust
 # ----------
-export PATH="$HOME/.cargo/bin:$PATH"
+PATH="$HOME/.cargo/bin:$PATH"
+
+# ----------
+# VASM
+# ----------
+PATH=$PATH:$HOME/tools/vasm/vasm
 
 PATH=~/.local/bin:~/bin:$PATH
 export PATH
+[ -f ~/.fzf.bash ] && source ~/.fzf.bash
