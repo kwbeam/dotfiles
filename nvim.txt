@@ -1,0 +1,49 @@
+===========
+shell tools
+===========
+[ ] [ripgrep]()
+[ ] [universal-ctags/ctags]()
+[ ] [junegunn/fzf]()
+
+===========
+vim plugins
+===========
+General
+=======
+[X] [vim-plug]()
+[X] [tpope/vim-sensible]()
+[X] [chriskempson/base16-vim]()
+[X] [preservim/nerdtree]()
+[X] [tpope/vim-commentary]()
+[X] [junegunn/fzf.vim]()
+[X] [christoomey/vim-tmux-navigator]()
+[X] [editorconfig/editorconfig-vim]()
+[X] [tpope/vim-fugitive](https://github.com/tpope/vim-fugitive)
+[X] [jpalardy/vim-slime]()
+[ ] [ludovicchabant/vim-gutentags]()
+
+Languages
+=========
+[X] [neoclide/coc.vim](https://github.com/neoclide/coc.nvim)
+
+JavaScript & TypeScript
+=======================
+[X] [pangloss/vim-javascript](https://github.com/pangloss/vim-javascript)
+[X] [leafgarland/typescript-vim](https://github.com/leafgarland/typescript-vim)
+[X] [MaxMEllon/vim-jsx-pretty](https://github.com/MaxMEllon/vim-jsx-pretty)
+
+[X] [neoclide/coc-tsserver](https://github.com/neoclide/coc-tsserver)
+[X] [neoclide/coc-eslint](https://github.com/neoclide/coc-eslint)
+[ ] [neoclide/coc-prettier](https://github.com/neoclide/coc-prettier)
+
+[#] [sheerun/vim-polyglot](https://github.com/sheerun/vim-polyglot)
+[#] [dense-analysis/ale](https://github.com/dense-analysis/ale)
+[#] [Shougo/deoplete.vim](https://github.com/Shougo/deoplete.nvim)
+[#] [ycm-core/YouCompleteMe](https://github.com/ycm-core/YouCompleteMe)
+[#] [Quramy/tsuquyomi](https://github.com/Quramy/tsuquyomi)
+[#] [neovim/nvim-lsp]()
+
+Python
+======
+[ ] [neoclide/coc-python](https://github.com/neoclide/coc-python)
+
