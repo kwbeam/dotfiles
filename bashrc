@@ -10,7 +10,7 @@ BASE16_SHELL="$HOME/.config/base16-shell/"
         eval "$("$BASE16_SHELL/profile_helper.sh")"
 
 set -o emacs
-export EDITOR="emacsclient"
+export EDITOR="nvim"
 
 alias lf="ls -F"
 alias ll="ls -al"
@@ -20,10 +20,7 @@ GIT_PS1_SHOWSTASHSTATE="yes_please"
 GIT_PS1_SHOWUNTRACKEDFILES="yes_please"
 GIT_PS1_SHOWUPSTREAM="auto"
 
-# ----------
-# Julia
-# ----------
-PATH=$PATH:~/tools/julia/julia-1.2.0/bin
+[ -f ~/.fzf.bash ] && source ~/.fzf.bash
 
 # ----------
 # Python
@@ -51,4 +48,3 @@ PATH=$PATH:$HOME/tools/vasm/vasm
 
 PATH=~/.local/bin:~/bin:$PATH
 export PATH
-[ -f ~/.fzf.bash ] && source ~/.fzf.bash

@@ -1,6 +1,6 @@
 #!/bin/bash
 
-declare -a files=("bash_profile" "bashrc" "cwmrc" "gitconfig" "gitignore" "inputrc" "tmux.conf" "vimrc" "Xresources")
+declare -a files=("bash_profile" "bashrc" "gitconfig" "gitignore" "tmux.conf")
 
 for f in "${files[@]}"
 do
@@ -15,3 +15,8 @@ do
   "Creating softlink to ~/projects/dotfiles/$f"
   ln -s ~/projects/dotfiles/$f ~/.$f
 done
+
+# neovim
+cp ~/.config/nvim/init.vim ~/.config/nvim/init.vim.bak
+rm ~/.config/nvim/init.vim
+ln -s ~/projects/dotfiles/init.vim ~/.config/nvim/init.vim
