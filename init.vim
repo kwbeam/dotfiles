@@ -1,44 +1,42 @@
-if exists('g:vscode')
-  " VSCode extension
-else
-  " ordinary neovim
-  set number
-  set nobackup
-  set expandtab
-  set softtabstop=2
-  set shiftwidth=2
-  set shiftround
+" ordinary neovim
+set number
+set nobackup
+set expandtab
+set softtabstop=2
+set shiftwidth=2
+set shiftround
 
-  " Sync with clipboard
-  set clipboard^=unnamed
+" Sync with clipboard
+set clipboard^=unnamed
 
-  call plug#begin()
-  Plug 'tpope/vim-sensible'
-  Plug 'chriskempson/base16-vim'
-  Plug 'preservim/nerdtree'
-  Plug 'tpope/vim-commentary'
-  Plug 'junegunn/fzf.vim'
-  Plug 'neovim/nvim-lsp'
-  call plug#end()
+call plug#begin()
+Plug 'tpope/vim-sensible'
+Plug 'chriskempson/base16-vim'
+Plug 'preservim/nerdtree'
+Plug 'tpope/vim-commentary'
+Plug 'junegunn/fzf.vim'
+Plug 'christoomey/vim-tmux-navigator'
+Plug 'editorconfig/editorconfig-vim'
+Plug 'tpope/vim-fugitive'
+Plug 'jpalardy/vim-slime'
 
-  lua << EOF
-  require'nvim_lsp'.tsserver.setup{
-    cmd = { "npx", "javascript-typescript-stdio" }
-  }
-EOF
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
 
-  autocmd Filetype javascript setlocal omnifunc=v:lua.vim.lsp.omnifunc
-  nnoremap <silent> gd    <cmd>lua vim.lsp.buf.declaration()<CR>
-  nnoremap <silent> <c-]> <cmd>lua vim.lsp.buf.definition()<CR>
-  nnoremap <silent> K     <cmd>lua vim.lsp.buf.hover()<CR>
-  nnoremap <silent> gD    <cmd>lua vim.lsp.buf.implementation()<CR>
-  nnoremap <silent> <c-k> <cmd>lua vim.lsp.buf.signature_help()<CR>
-  nnoremap <silent> 1gD   <cmd>lua vim.lsp.buf.type_definition()<CR>
-  nnoremap <silent> gr    <cmd>lua vim.lsp.buf.references()<CR>
-  nnoremap <silent> g0    <cmd>lua vim.lsp.buf.document_symbol()<CR>
+Plug 'pangloss/vim-javascript'
+Plug 'leafgarland/typescript-vim'
+Plug 'MaxMEllon/vim-jsx-pretty'
+call plug#end()
 
-  if filereadable(expand("~/.vimrc_background"))
-    let base16colorspace=256
-    source ~/.vimrc_background
-  endif
+" vim-slime
+let g:slime_target = "tmux"
+
+" vim-javascript settings
+let g:javascript_conceal_function       = "ƒ"
+let g:javascript_conceal_null           = "ø"
+let g:javascript_conceal_arrow_function = "⇒"
+set conceallevel=1
+
+if filereadable(expand("~/.vimrc_background"))
+  let base16colorspace=256
+  source ~/.vimrc_background
 endif
