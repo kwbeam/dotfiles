@@ -13,6 +13,8 @@ export EDITOR="nvim"
 
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash
 
+setxkbmap -option caps:swapescape
+
 # --------------
 # Python: pyenv
 # --------------
