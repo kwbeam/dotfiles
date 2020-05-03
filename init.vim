@@ -25,6 +25,8 @@ Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'pangloss/vim-javascript'
 Plug 'leafgarland/typescript-vim'
 Plug 'MaxMEllon/vim-jsx-pretty'
+
+Plug 'rust-lang/rust.vim'
 call plug#end()
 
 " vim-slime

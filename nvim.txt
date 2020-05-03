@@ -1,9 +1,9 @@
 ===========
 shell tools
 ===========
-[ ] [ripgrep]()
+[X] [junegunn/fzf]()
+[X] [ripgrep]()
 [ ] [universal-ctags/ctags]()
-[ ] [junegunn/fzf]()
 
 ===========
 vim plugins
@@ -47,3 +47,6 @@ Python
 ======
 [ ] [neoclide/coc-python](https://github.com/neoclide/coc-python)
 
+Rust
+====
+[X] [rust-lang/rust.vim](https://github.com/rust-lang/rust.vim)
