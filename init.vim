@@ -1,4 +1,4 @@
-" ordinary neovim
+" ordinary neovimvim
 set number
 set nobackup
 set expandtab
@@ -14,6 +14,7 @@ Plug 'tpope/vim-sensible'
 Plug 'chriskempson/base16-vim'
 Plug 'preservim/nerdtree'
 Plug 'tpope/vim-commentary'
+Plug 'junegunn/fzf'
 Plug 'junegunn/fzf.vim'
 Plug 'christoomey/vim-tmux-navigator'
 Plug 'editorconfig/editorconfig-vim'
@@ -28,6 +29,9 @@ Plug 'MaxMEllon/vim-jsx-pretty'
 
 Plug 'rust-lang/rust.vim'
 call plug#end()
+
+" NERDTree
+map <C-n> :NERDTreeToggle<CR>
 
 " vim-slime
 let g:slime_target = "tmux"
