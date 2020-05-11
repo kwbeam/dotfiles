@@ -1,20 +1,21 @@
-" ordinary neovimvim
+if !exists('g:vscode')
+
 set number
 set nobackup
 set expandtab
 set softtabstop=2
 set shiftwidth=2
 set shiftround
-
-" Sync with clipboard
 set clipboard^=unnamed
+
+let g:python3_host_prog = '/home/kbeam/.pyenv/versions/py3nvim/bin/python'
 
 call plug#begin()
 Plug 'tpope/vim-sensible'
 Plug 'chriskempson/base16-vim'
 Plug 'preservim/nerdtree'
 Plug 'tpope/vim-commentary'
-Plug 'junegunn/fzf'
+Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
 Plug 'christoomey/vim-tmux-navigator'
 Plug 'editorconfig/editorconfig-vim'
@@ -45,4 +46,6 @@ set conceallevel=1
 if filereadable(expand("~/.vimrc_background"))
   let base16colorspace=256
   source ~/.vimrc_background
+endif
+
 endif
