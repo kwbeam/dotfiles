@@ -8,14 +8,14 @@ set shiftwidth=2
 set shiftround
 set clipboard^=unnamed
 
-let g:python3_host_prog = '/home/kbeam/.pyenv/versions/py3nvim/bin/python'
+let g:python3_host_prog = '~/.pyenv/versions/py3nvim/bin/python'
 
 call plug#begin()
 Plug 'tpope/vim-sensible'
 Plug 'chriskempson/base16-vim'
 Plug 'preservim/nerdtree'
 Plug 'tpope/vim-commentary'
-Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+Plug 'junegunn/fzf'
 Plug 'junegunn/fzf.vim'
 Plug 'christoomey/vim-tmux-navigator'
 Plug 'editorconfig/editorconfig-vim'
