@@ -3,7 +3,6 @@
 # ----------
 . /etc/bash_completion
 
-PATH=$PATH:~/bin
 PATH=$PATH:~/.local/bin
 
 alias lf="ls -F"
@@ -12,8 +11,6 @@ alias ll="ls -al"
 export EDITOR="nvim"
 
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash
-
-setxkbmap -option caps:swapescape
 
 # --------------
 # Python: pyenv
@@ -35,11 +32,6 @@ export NVM_DIR="$([ -z "${XDG_CONFIG_HOME-}" ] && printf %s "${HOME}/.nvm" || pr
 # ----------
 PATH="$HOME/.cargo/bin:$PATH"
 
-# ----------
-# VASM
-# ----------
-PATH=$PATH:$HOME/tools/vasm/vasm
-
 # Base16 Shell
 BASE16_SHELL="$HOME/.config/base16-shell/"
 [ -n "$PS1" ] && \
@@ -53,5 +45,9 @@ GIT_PS1_SHOWUPSTREAM="auto"
 
 # PS1="\[$BLUE\](\u@\h) \[$WHITE\]\w\[$GREEN\]\$(__git_ps1) \[$WHITE\]\$ "
 # PS1="\[$BLUE\](\u@\h) \[$WHITE\]\w\[$GREEN\] \[$WHITE\]$ "
+
+if [ -f $HOME/.bashrc.`hostname` ]; then
+  source $HOME/.bashrc.`hostname`
+fi
 
 export PATH

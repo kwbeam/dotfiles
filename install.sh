@@ -1,6 +1,6 @@
 #!/bin/bash
 
-declare -a files=("bash_profile" "bashrc" "gitconfig" "gitignore" "tmux.conf")
+declare -a files=("bash_profile" "bashrc" "bashrc.`hostname`" "gitconfig" "gitignore" "tmux.conf")
 
 for f in "${files[@]}"
 do
@@ -12,7 +12,7 @@ do
   	rm ~/.$f
   fi
 
-  "Creating softlink to ~/projects/dotfiles/$f"
+  echo "Creating softlink for $f"
   ln -s ~/projects/dotfiles/$f ~/.$f
 done
 
