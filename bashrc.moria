@@ -1,4 +1,0 @@
-# ----------
-# VASM
-# ----------
-PATH=$PATH:$HOME/tools/vasm/vasm
