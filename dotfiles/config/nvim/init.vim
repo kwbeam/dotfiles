@@ -50,6 +50,8 @@ let g:javascript_conceal_arrow_function = "⇒"
 set conceallevel=1
 
 " coc settings
+command! -nargs=0 Format :call CocAction('format');
+
 if isdirectory('./node_modules') && isdirectory('./node_modules/eslint')
   let g:coc_global_extensions += ['coc-eslint']
 endif
