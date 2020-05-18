@@ -6,21 +6,27 @@ dotfiles:
   f_bash_profile:
     src: bash_profile
     dst: ~/.bash_profile
+    link: link
   f_bashrc:
     src: bashrc
     dst: ~/.bashrc
+    link: link
   f_tmux.conf:
     src: tmux.conf
     dst: ~/.tmux.conf
+    link: link
   f_gitconfig:
     src: gitconfig
     dst: ~/.gitconfig
+    link: link
   f_gitignore:
     src: gitignore
     dst: ~/.gitignore
+    link: link
   f_init.vim:
     src: config/nvim/init.vim
     dst: ~/.config/nvim/init.vim
+    link: link
 profiles:
   moria:
     dotfiles:
