@@ -43,6 +43,21 @@ GIT_PS1_SHOWSTASHSTATE="yes_please"
 GIT_PS1_SHOWUNTRACKEDFILES="yes_please"
 GIT_PS1_SHOWUPSTREAM="auto"
 
+{%@@ if profile == "moria" @@%}
+# ----------
+# VASM
+# ----------
+PATH=$PATH:$HOME/tools/vasm/vasm
+{%@@ endif @@%}
+
+
+{%@@ if profile == "nsidc-kbeam-484" @@%}
+# ---------------------------
+# PulseSecure VPN Client
+# ---------------------------
+export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/usr/local/pulse
+{%@@ endif @@%}
+
 # PS1="\[$BLUE\](\u@\h) \[$WHITE\]\w\[$GREEN\]\$(__git_ps1) \[$WHITE\]\$ "
 # PS1="\[$BLUE\](\u@\h) \[$WHITE\]\w\[$GREEN\] \[$WHITE\]$ "
 

@@ -1,6 +1,12 @@
+{%@@ if profile == "moria" @@%}
 [user]
 	name = Kevin Beam
 	email = kwbeam@fastmail.com
+{%@@ elif profile == "nsidc-kbeam-484" @@%}
+[user]
+	name = Kevin Beam
+	email = kbeam@nsidc.org
+{%@@ endif @@%}
 [color]
 	ui = auto
 [apply]
@@ -8,14 +14,18 @@
 [core]
 	autocrlf = input
 	safecrlf = false
+	excludesfile = ~/.gitignore
 [alias]
         st = status
         sts = status --short
         hist = log --pretty=format:\"%h %ad | %s%d [%an]\" --graph --date=short
 [push]
-	default = tracking
+	default = upstream
+        followTags = true
 [filter "lfs"]
 	clean = git-lfs clean -- %f
 	smudge = git-lfs smudge -- %f
 	process = git-lfs filter-process
 	required = true
+[credential]
+	helper = store

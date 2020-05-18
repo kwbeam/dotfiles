@@ -36,3 +36,11 @@ profiles:
     - f_gitconfig
     - f_gitignore
     - f_init.vim
+  nsidc-kbeam-484:
+    dotfiles:
+    - f_bash_profile
+    - f_bashrc
+    - f_tmux.conf
+    - f_gitconfig
+    - f_gitignore
+    - f_init.vim
