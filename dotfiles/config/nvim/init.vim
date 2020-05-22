@@ -1,5 +1,10 @@
 if !exists('g:vscode')
 
+nnoremap <Up> <NOP>
+nnoremap <Down> <NOP>
+nnoremap <Left> <NOP>
+nnoremap <Right> <NOP>
+
 set number
 set nobackup
 set expandtab
@@ -11,6 +16,7 @@ set clipboard^=unnamed
 let g:python3_host_prog = '~/.pyenv/versions/py3nvim/bin/python'
 
 call plug#begin()
+
 Plug 'tpope/vim-sensible'
 Plug 'chriskempson/base16-vim'
 Plug 'preservim/nerdtree'
@@ -29,14 +35,24 @@ Plug 'leafgarland/typescript-vim'
 
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 let g:coc_global_extensions = [
-  \ 'coc-tsserver'
+  \ 'coc-css',
+  \ 'coc-html',
+  \ 'coc-json',
+  \ 'coc-python',
+  \ 'coc-tsserver',
+  \ 'coc-yaml'
   \ ]
 
 Plug 'rust-lang/rust.vim'
 call plug#end()
 
+" FZF
+nnoremap <Leader><Leader> :Files<cr>
+
 " NERDTree
 map <C-n> :NERDTreeToggle<CR>
+let NERDTreeShowHidden=1
+let NERDTreeQuitOnOpen=1
 
 " vim-slime
 let g:slime_target = "tmux"
