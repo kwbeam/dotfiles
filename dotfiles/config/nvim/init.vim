@@ -44,6 +44,8 @@ Plug 'leafgarland/typescript-vim'
 " Plug 'MaxMEllon/vim-jsx-pretty'
 
 Plug 'rust-lang/rust.vim'
+
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
 call plug#end()
 
 " nnoremap <silent> <C-l> :<C-u>nohlsearch<CR><C-l>
@@ -69,7 +71,6 @@ let g:javascript_conceal_arrow_function = "⇒"
 set conceallevel=1
 
 " coc settings
-Plug 'neoclide/coc.nvim', {'branch': 'release'}
 let g:coc_global_extensions = [
   \ 'coc-css',
   \ 'coc-html',
