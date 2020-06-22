@@ -21,6 +21,10 @@ Plug 'tpope/vim-sensible'
 
 Plug 'chriskempson/base16-vim'
 
+Plug 'itchyny/lightline.vim'
+
+Plug 'terryma/vim-multiple-cursors'
+
 Plug 'christoomey/vim-tmux-navigator'
 
 Plug 'junegunn/fzf'
@@ -37,18 +41,28 @@ Plug 'tpope/vim-fugitive'
 Plug 'junegunn/gv.vim'
 
 Plug 'jpalardy/vim-slime'
+
 Plug 'puremourning/vimspector'
 
 Plug 'pangloss/vim-javascript'
+Plug 'MaxMEllon/vim-jsx-pretty'
 Plug 'leafgarland/typescript-vim'
-" Plug 'MaxMEllon/vim-jsx-pretty'
+Plug 'ianks/vim-tsx'
+
+Plug 'Vimjas/vim-python-pep8-indent'
 
 Plug 'rust-lang/rust.vim'
 
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
+
 call plug#end()
 
 " nnoremap <silent> <C-l> :<C-u>nohlsearch<CR><C-l>
+
+" lightline config
+let g:lightline = {
+      \ 'colorscheme': 'wombat',
+      \ }
 
 " FZF
 nnoremap <Leader><Leader> :Files<cr>
@@ -110,6 +124,20 @@ set shortmess+=c
 " diagnostics appear/become resolved.
 set signcolumn=yes
 
+" coc-lightline
+let g:lightline = {
+	\ 'colorscheme': 'wombat',
+	\ 'active': {
+	\   'left': [ [ 'mode', 'paste' ],
+	\             [ 'cocstatus', 'readonly', 'filename', 'modified' ] ]
+	\ },
+	\ 'component_function': {
+	\   'cocstatus': 'coc#status'
+	\ },
+	\ }
+
+  " Use auocmd to force lightline update.
+  autocmd User CocStatusChange,CocDiagnosticChange call lightline#update()
 if filereadable(expand("~/.vimrc_background"))
   let base16colorspace=256
   source ~/.vimrc_background
