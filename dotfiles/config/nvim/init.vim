@@ -18,14 +18,24 @@ let g:python3_host_prog = '~/.pyenv/versions/py3nvim/bin/python'
 call plug#begin()
 
 Plug 'tpope/vim-sensible'
+
 Plug 'chriskempson/base16-vim'
-Plug 'preservim/nerdtree'
-Plug 'tpope/vim-commentary'
+
+Plug 'christoomey/vim-tmux-navigator'
+
 Plug 'junegunn/fzf'
 Plug 'junegunn/fzf.vim'
-Plug 'christoomey/vim-tmux-navigator'
+
 Plug 'editorconfig/editorconfig-vim'
+
+Plug 'tpope/vim-commentary'
+
+Plug 'preservim/nerdtree'
+Plug 'Xuyuanp/nerdtree-git-plugin'
+
 Plug 'tpope/vim-fugitive'
+Plug 'junegunn/gv.vim'
+
 Plug 'jpalardy/vim-slime'
 Plug 'puremourning/vimspector'
 
@@ -33,21 +43,14 @@ Plug 'pangloss/vim-javascript'
 Plug 'leafgarland/typescript-vim'
 " Plug 'MaxMEllon/vim-jsx-pretty'
 
-Plug 'neoclide/coc.nvim', {'branch': 'release'}
-let g:coc_global_extensions = [
-  \ 'coc-css',
-  \ 'coc-html',
-  \ 'coc-json',
-  \ 'coc-python',
-  \ 'coc-tsserver',
-  \ 'coc-yaml'
-  \ ]
-
 Plug 'rust-lang/rust.vim'
 call plug#end()
 
+" nnoremap <silent> <C-l> :<C-u>nohlsearch<CR><C-l>
+
 " FZF
 nnoremap <Leader><Leader> :Files<cr>
+nmap <leader><tab> <plug>(fzf-maps-n)
 
 " NERDTree
 map <C-n> :NERDTreeToggle<CR>
@@ -66,24 +69,24 @@ let g:javascript_conceal_arrow_function = "⇒"
 set conceallevel=1
 
 " coc settings
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
+let g:coc_global_extensions = [
+  \ 'coc-css',
+  \ 'coc-html',
+  \ 'coc-json',
+  \ 'coc-python',
+  \ 'coc-tsserver',
+  \ 'coc-yaml'
+  \ ]
+
 command! -nargs=0 Format :call CocAction('format');
 
 if isdirectory('./node_modules') && isdirectory('./node_modules/eslint')
   let g:coc_global_extensions += ['coc-eslint']
 endif
+
 nnoremap <silent> K :call CocAction('doHover')<CR>
-function! ShowDocIfNoDiagnostic(timer_id)
-  if (coc#util#has_float() == 0)
-    silent call CocActionAsync('doHover')
-  endif
-endfunction
 
-function! s:show_hover_doc()
-  call timer_start(500, 'ShowDocIfNoDiagnostic')
-endfunction
-
-autocmd CursorHoldI * :call <SID>show_hover_doc()
-autocmd CursorHold * :call <SID>show_hover_doc()
 nmap <silent> gd <Plug>(coc-definition)
 nmap <silent> gy <Plug>(coc-type-definition)
 nmap <silent> gr <Plug>(coc-references)
