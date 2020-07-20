@@ -27,6 +27,9 @@ dotfiles:
     src: config/nvim/init.vim
     dst: ~/.config/nvim/init.vim
     link: link
+  f_coc.vim:
+    src: config/nvim/coc.vim
+    dst: ~/.config/nvim/coc.vim
 profiles:
   moria:
     dotfiles:
@@ -36,6 +39,7 @@ profiles:
     - f_gitconfig
     - f_gitignore
     - f_init.vim
+    - f_coc.vim
   nsidc-kbeam-484:
     dotfiles:
     - f_bash_profile
@@ -44,3 +48,4 @@ profiles:
     - f_gitconfig
     - f_gitignore
     - f_init.vim
+    - f_coc.vim
