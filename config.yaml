@@ -30,6 +30,9 @@ dotfiles:
   f_coc.vim:
     src: config/nvim/coc.vim
     dst: ~/.config/nvim/coc.vim
+  f_coc-settings.json:
+    src: config/nvim/coc-settings.json
+    dst: ~/.config/nvim/coc-settings.json
 profiles:
   moria:
     dotfiles:
@@ -40,6 +43,7 @@ profiles:
     - f_gitignore
     - f_init.vim
     - f_coc.vim
+    - f_coc-settings.json
   nsidc-kbeam-484:
     dotfiles:
     - f_bash_profile
@@ -49,3 +53,4 @@ profiles:
     - f_gitignore
     - f_init.vim
     - f_coc.vim
+    - f_coc-settings.json
