@@ -50,6 +50,15 @@ GIT_PS1_SHOWUPSTREAM="auto"
 PATH=$PATH:$HOME/tools/vasm/vasm
 {%@@ endif @@%}
 
+# ----------
+# Go
+# ----------
+PATH=$PATH:/usr/local/go/bin
+
+# ----------
+# Julia
+# ----------
+PATH=$PATH:"$HOME/tools/julia/julia-1.4.2/bin"
 
 {%@@ if profile == "nsidc-kbeam-484" @@%}
 # ---------------------------
@@ -57,12 +66,5 @@ PATH=$PATH:$HOME/tools/vasm/vasm
 # ---------------------------
 export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/usr/local/pulse
 {%@@ endif @@%}
-
-# PS1="\[$BLUE\](\u@\h) \[$WHITE\]\w\[$GREEN\]\$(__git_ps1) \[$WHITE\]\$ "
-# PS1="\[$BLUE\](\u@\h) \[$WHITE\]\w\[$GREEN\] \[$WHITE\]$ "
-
-if [ -f $HOME/.bashrc.`hostname` ]; then
-  source $HOME/.bashrc.`hostname`
-fi
 
 export PATH
