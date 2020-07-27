@@ -1,4 +1,5 @@
 call plug#begin()
+
 Plug 'tpope/vim-sensible'
 Plug 'chriskempson/base16-vim'
 Plug 'christoomey/vim-tmux-navigator'
@@ -12,22 +13,24 @@ Plug 'Xuyuanp/nerdtree-git-plugin'
 Plug 'tpope/vim-fugitive'
 Plug 'junegunn/gv.vim'
 Plug 'jpalardy/vim-slime'
-Plug 'puremourning/vimspector'
 
 Plug 'pangloss/vim-javascript'
-Plug 'MaxMEllon/vim-jsx-pretty'
 Plug 'leafgarland/typescript-vim'
-Plug 'ianks/vim-tsx'
-Plug 'Vimjas/vim-python-pep8-indent'
 Plug 'rust-lang/rust.vim'
-Plug 'neoclide/coc.nvim', {'branch': 'release'}
+
+Plug 'puremourning/vimspector'
+
+Plug 'neovim/nvim-lsp'
+
 call plug#end()
 
+" Disable arrow keys
 nnoremap <Up> <NOP>
 nnoremap <Down> <NOP>
 nnoremap <Left> <NOP>
 nnoremap <Right> <NOP>
 
+" Sane defaults
 set number
 set nobackup
 set expandtab
@@ -36,8 +39,15 @@ set shiftwidth=2
 set shiftround
 set clipboard^=unnamed
 
+" Enable Python extensions
 let g:python3_host_prog = '~/.pyenv/versions/py3nvim/bin/python'
 
+if filereadable(expand("~/.vimrc_background"))
+  let base16colorspace=256
+  source ~/.vimrc_background
+endif
+
+" Turn off search highlights
 " nnoremap <silent> <C-l> :<C-u>nohlsearch<CR><C-l>
 
 " FZF
@@ -62,10 +72,23 @@ let g:javascript_conceal_null           = "ø"
 let g:javascript_conceal_arrow_function = "⇒"
 set conceallevel=1
 
-" coc settings
-source $HOME/.config/nvim/coc.vim
+" neovim lsp
+lua require'nvim_lsp'.pyls.setup{}
+lua require'nvim_lsp'.tsserver.setup{}
 
-if filereadable(expand("~/.vimrc_background"))
-  let base16colorspace=256
-  source ~/.vimrc_background
-endif
+nnoremap <silent> gd    <cmd>lua vim.lsp.buf.definition()<CR>
+nnoremap <silent> K     <cmd>lua vim.lsp.buf.hover()<CR>
+nnoremap <silent> gt   <cmd>lua vim.lsp.buf.type_definition()<CR>
+nnoremap <silent> gr    <cmd>lua vim.lsp.buf.references()<CR>
+nnoremap <silent> gh    <cmd>lua vim.lsp.buf.document_symbol()<CR>
+
+" Use LSP omni-completion in Python files.
+autocmd Filetype python setlocal omnifunc=v:lua.vim.lsp.omnifunc
+autocmd Filetype typescript setlocal omnifunc=v:lua.vim.lsp.omnifunc
+
+lua << EOF
+local nvim_lsp = require'nvim_lsp'
+nvim_lsp.tsserver.setup{
+  cmd = { "npx", "typescript-language-server", "--stdio" }
+}
+EOF
