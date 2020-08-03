@@ -74,21 +74,21 @@ set conceallevel=1
 
 " neovim lsp
 lua require'nvim_lsp'.pyls.setup{}
-lua require'nvim_lsp'.tsserver.setup{}
+" lua require'nvim_lsp'.tsserver.setup{}
+lua << EOF
+local nvim_lsp = require'nvim_lsp'
+nvim_lsp.tsserver.setup{
+  cmd = { "npx", "javascript-typescript-stdio" }
+}
+EOF
+" cmd = { "npx", "typescript-language-server", "--stdio" }
 
-nnoremap <silent> gd    <cmd>lua vim.lsp.buf.definition()<CR>
 nnoremap <silent> K     <cmd>lua vim.lsp.buf.hover()<CR>
-nnoremap <silent> gt   <cmd>lua vim.lsp.buf.type_definition()<CR>
+nnoremap <silent> gd    <cmd>lua vim.lsp.buf.definition()<CR>
+nnoremap <silent> gt    <cmd>lua vim.lsp.buf.type_definition()<CR>
 nnoremap <silent> gr    <cmd>lua vim.lsp.buf.references()<CR>
 nnoremap <silent> gh    <cmd>lua vim.lsp.buf.document_symbol()<CR>
 
 " Use LSP omni-completion in Python files.
 autocmd Filetype python setlocal omnifunc=v:lua.vim.lsp.omnifunc
 autocmd Filetype typescript setlocal omnifunc=v:lua.vim.lsp.omnifunc
-
-lua << EOF
-local nvim_lsp = require'nvim_lsp'
-nvim_lsp.tsserver.setup{
-  cmd = { "npx", "typescript-language-server", "--stdio" }
-}
-EOF
