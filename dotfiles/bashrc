@@ -48,7 +48,7 @@ PATH=$PATH:$HOME/tools/vasm/vasm
 # ----------
 # Go
 # ----------
-PATH=$PATH:/usr/local/go/bin
+PATH=$PATH:/usr/local/go/bin:$HOME/go/bin
 
 # ----------
 # Julia
@@ -61,6 +61,9 @@ PATH=$PATH:"$HOME/tools/julia/julia-1.4.2/bin"
 # ---------------------------
 export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/usr/local/pulse
 {%@@ endif @@%}
+
+# Kubernetes completion
+source <(kubectl completion bash)
 
 # Activate pyenv
 eval "$(pyenv init -)"
