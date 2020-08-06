@@ -16,11 +16,10 @@ Plug 'jpalardy/vim-slime'
 
 Plug 'pangloss/vim-javascript'
 Plug 'leafgarland/typescript-vim'
-Plug 'rust-lang/rust.vim'
 
 Plug 'puremourning/vimspector'
 
-Plug 'neovim/nvim-lsp'
+Plug 'dense-analysis/ale'
 
 call plug#end()
 
@@ -40,18 +39,19 @@ set expandtab
 set softtabstop=2
 set shiftwidth=2
 set shiftround
-set clipboard^=unnamed
+set clipboard^=unnamedplus
 
 " Enable Python extensions
 let g:python3_host_prog = '~/.pyenv/versions/py3nvim/bin/python'
 
+" Theme
 if filereadable(expand("~/.vimrc_background"))
   let base16colorspace=256
   source ~/.vimrc_background
 endif
 
 " Turn off search highlights
-" nnoremap <silent> <C-l> :<C-u>nohlsearch<CR><C-l>
+nnoremap <Leader>x :<C-u>nohlsearch<CR>
 
 " FZF
 nnoremap <C-p> :<C-u>FZF<CR>
@@ -76,23 +76,13 @@ let g:javascript_conceal_null           = "ø"
 let g:javascript_conceal_arrow_function = "⇒"
 set conceallevel=1
 
-" neovim lsp
-lua require'nvim_lsp'.pyls.setup{}
-" lua require'nvim_lsp'.tsserver.setup{}
-lua << EOF
-local nvim_lsp = require'nvim_lsp'
-nvim_lsp.tsserver.setup{
-  cmd = { "npx", "javascript-typescript-stdio" }
-}
-EOF
-" cmd = { "npx", "typescript-language-server", "--stdio" }
-
-nnoremap <silent> K     <cmd>lua vim.lsp.buf.hover()<CR>
-nnoremap <silent> gd    <cmd>lua vim.lsp.buf.definition()<CR>
-nnoremap <silent> gt    <cmd>lua vim.lsp.buf.type_definition()<CR>
-nnoremap <silent> gr    <cmd>lua vim.lsp.buf.references()<CR>
-nnoremap <silent> gh    <cmd>lua vim.lsp.buf.document_symbol()<CR>
-
-" Use LSP omni-completion in Python files.
-autocmd Filetype python setlocal omnifunc=v:lua.vim.lsp.omnifunc
-autocmd Filetype typescript setlocal omnifunc=v:lua.vim.lsp.omnifunc
+" ALE
+nmap gd :ALEGoToDefinition<CR>
+nmap gt :ALEGoToTypeDefinition<CR>
+nmap gr :ALEFindReferences<CR>
+nmap gs :ALESymbolSearch<CR>
+nmap K :ALEHover<CR>
+let g:ale_completion_enabled=1
+let g:ale_completion_tsserver_autoimport=1
+let g:ale_completion_delay=500
+let g:ale_sign_column_always=1
