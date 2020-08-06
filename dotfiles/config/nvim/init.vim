@@ -24,6 +24,9 @@ Plug 'neovim/nvim-lsp'
 
 call plug#end()
 
+" Use a new leader key
+let mapleader=','
+
 " Disable arrow keys
 nnoremap <Up> <NOP>
 nnoremap <Down> <NOP>
@@ -51,6 +54,7 @@ endif
 " nnoremap <silent> <C-l> :<C-u>nohlsearch<CR><C-l>
 
 " FZF
+nnoremap <C-p> :<C-u>FZF<CR>
 nnoremap <Leader><Leader> :Files<cr>
 nmap <leader><tab> <plug>(fzf-maps-n)
 
