@@ -34,7 +34,7 @@ dotfiles:
     src: config/nvim/coc-settings.json
     dst: ~/.config/nvim/coc-settings.json
 profiles:
-  moria:
+  hornburg:
     dotfiles:
     - f_bash_profile
     - f_bashrc

@@ -39,10 +39,10 @@ set expandtab
 set softtabstop=2
 set shiftwidth=2
 set shiftround
-set clipboard^=unnamedplus
+set clipboard+=unnamedplus
 
 " Enable Python extensions
-let g:python3_host_prog = '~/.pyenv/versions/py3nvim/bin/python'
+let g:python3_host_prog = '~/.pyenv/versions/main/bin/python'
 
 " Theme
 if filereadable(expand("~/.vimrc_background"))

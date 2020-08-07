@@ -38,7 +38,7 @@ export NVM_DIR="$([ -z "${XDG_CONFIG_HOME-}" ] && printf %s "${HOME}/.nvm" || pr
 # ----------
 PATH="$HOME/.cargo/bin:$PATH"
 
-{%@@ if profile == "moria" @@%}
+{%@@ if profile == "hornburg" @@%}
 # ----------
 # VASM
 # ----------

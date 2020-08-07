@@ -1,4 +1,4 @@
-{%@@ if profile == "moria" @@%}
+{%@@ if profile == "hornburg" @@%}
 [user]
 	name = Kevin Beam
 	email = kwbeam@fastmail.com
