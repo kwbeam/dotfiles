@@ -50,11 +50,6 @@ PATH=$PATH:$HOME/tools/vasm/vasm
 # ----------
 PATH=$PATH:/usr/local/go/bin
 
-# ----------
-# Julia
-# ----------
-PATH=$PATH:"$HOME/tools/julia/julia-1.5.0/bin"
-
 {%@@ if profile == "nsidc-kbeam-484" @@%}
 # ---------------------------
 # PulseSecure VPN Client
