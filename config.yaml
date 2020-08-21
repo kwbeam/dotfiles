@@ -33,6 +33,9 @@ dotfiles:
   f_coc-settings.json:
     src: config/nvim/coc-settings.json
     dst: ~/.config/nvim/coc-settings.json
+  f_zshrc:
+    src: zshrc
+    dst: ~/.zshrc
 profiles:
   hornburg:
     dotfiles:
@@ -44,6 +47,7 @@ profiles:
     - f_init.vim
     - f_coc.vim
     - f_coc-settings.json
+    - f_zshrc
   nsidc-kbeam-484:
     dotfiles:
     - f_bash_profile
@@ -54,3 +58,4 @@ profiles:
     - f_init.vim
     - f_coc.vim
     - f_coc-settings.json
+    - f_zshrc

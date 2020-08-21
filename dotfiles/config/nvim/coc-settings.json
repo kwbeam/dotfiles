@@ -2,8 +2,10 @@
   "coc.preferences.formatOnSaveFiletypes": [
     "javascript", "python", "typescript"
   ],
+  "javascript.format.insertSpaceAfterOpeningAndBeforeClosingNonemptyBraces": true,
+  "typescript.format.insertSpaceAfterOpeningAndBeforeClosingNonemptyBraces": true,
   "python.jediEnabled": false,
   "python.linting.lintOnSave": true,
   "python.linting.pylintEnabled": true,
-  "python.formatting.provider": "black"
+  "python.formatting.provider": "autopep8"
 }
