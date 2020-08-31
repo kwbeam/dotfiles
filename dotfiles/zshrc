@@ -2,7 +2,7 @@
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
 # Path to your oh-my-zsh installation.
-export ZSH="/home/kbeam/.oh-my-zsh"
+export ZSH="$HOME/.oh-my-zsh"
 
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
@@ -70,7 +70,7 @@ ZSH_THEME="simple"
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(aws dotenv git pyenv)
 
-source $ZSH/oh-my-zsh.sh 
+source $ZSH/oh-my-zsh.sh
 
 # User configuration
 
@@ -149,12 +149,12 @@ PATH=$PATH:/usr/local/go/bin
 PATH=$PATH:$HOME/tools/vasm/vasm
 {%@@ endif @@%}
 
+{%@@ if profile == "nsidc-kbeam-484" @@%}
 # ---------------------------
 # Kubernetes completion
 # ---------------------------
 source <(kubectl completion zsh)
 
-{%@@ if profile == "nsidc-kbeam-484" @@%}
 # ---------------------------
 # PulseSecure VPN Client
 # ---------------------------
