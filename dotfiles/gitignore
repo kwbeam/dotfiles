@@ -1,3 +1,5 @@
 .python-version
 .nvmrc
 .dir-locals.el
+.vim
+kwb-x
