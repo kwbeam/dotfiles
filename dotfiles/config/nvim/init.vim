@@ -9,19 +9,25 @@ Plug 'terryma/vim-multiple-cursors'
 Plug 'tpope/vim-commentary'
 Plug 'preservim/nerdtree'
 Plug 'Xuyuanp/nerdtree-git-plugin'
+Plug 'glacambre/firenvim', { 'do': { _ -> firenvim#install(0) } }
 
 Plug 'tpope/vim-fugitive'
 Plug 'junegunn/gv.vim'
 Plug 'jpalardy/vim-slime'
 Plug 'tpope/vim-dispatch'
-Plug 'vim-test/vim-test'
+
+Plug 'neovimhaskell/haskell-vim'
 
 Plug 'pangloss/vim-javascript'
 Plug 'leafgarland/typescript-vim'
 
-Plug 'puremourning/vimspector'
+Plug 'rust-lang/rust.vim'
 
-Plug 'neoclide/coc.nvim', {'branch': 'release'}
+" Plug 'vim-test/vim-test'
+
+" Plug 'puremourning/vimspector'
+
+" Plug 'neoclide/coc.nvim', {'branch': 'release'}
 
 call plug#end()
 
@@ -70,22 +76,22 @@ let g:slime_target = "tmux"
 let g:slime_python_ipython = 1
 
 " vim-test
-nmap <silent> t<C-n> :TestNearest<CR>
-nmap <silent> t<C-f> :TestFile<CR>
-nmap <silent> t<C-s> :TestSuite<CR>
-nmap <silent> t<C-l> :TestLast<CR>
-nmap <silent> t<C-g> :TestVisit<CR>
-let test#strategy = "dispatch"
-let test#python#runner = 'pyunit'
-augroup test
-  autocmd!
-  autocmd BufWrite * if test#exists() |
-    \   TestFile |
-    \ endif
-augroup END
+" nmap <silent> t<C-n> :TestNearest<CR>
+" nmap <silent> t<C-f> :TestFile<CR>
+" nmap <silent> t<C-s> :TestSuite<CR>
+" nmap <silent> t<C-l> :TestLast<CR>
+" nmap <silent> t<C-g> :TestVisit<CR>
+" let test#strategy = "dispatch"
+" let test#python#runner = 'pyunit'
+" augroup test
+"   autocmd!
+"   autocmd BufWrite * if test#exists() |
+"     \   TestFile |
+"     \ endif
+" augroup END
 
 " vimspector
-let g:vimspector_enable_mappings='HUMAN'
+" let g:vimspector_enable_mappings='HUMAN'
 
 " vim-javascript settings
 let g:javascript_conceal_function       = "ƒ"
@@ -94,4 +100,4 @@ let g:javascript_conceal_arrow_function = "⇒"
 set conceallevel=1
 
 " coc settings
-source $HOME/.config/nvim/coc.vim
+" source $HOME/.config/nvim/coc.vim
