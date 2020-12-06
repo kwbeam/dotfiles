@@ -68,7 +68,7 @@ ZSH_THEME="simple"
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(aws dotenv git pyenv)
+plugins=(aws dotenv git poetry pyenv)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -120,6 +120,9 @@ PATH="$PYENV_ROOT/bin:$PATH"
 export PYENV_VIRTUALENV_DISABLE_PROMPT=0
 export PYENV_VIRTUALENV_VERBOSE_ACTIVATE=1
 # Note: pyenv is activated at the end of the script
+
+# Poetry
+PATH="$HOME/.poetry/bin:$PATH"
 
 # ---------------------------
 # JavaScript:  nvm
