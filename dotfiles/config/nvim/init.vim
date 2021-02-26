@@ -1,64 +1,87 @@
-call plug#begin()
+if exists('g:vscode')
+  " VSCode-embedded configuration
+ 
+else
+  " Standalone Neovim configuration
 
-Plug 'tpope/vim-sensible'
-Plug 'chriskempson/base16-vim'
-Plug 'christoomey/vim-tmux-navigator'
-Plug 'junegunn/fzf'
-Plug 'junegunn/fzf.vim'
-Plug 'terryma/vim-multiple-cursors'
-Plug 'tpope/vim-commentary'
-Plug 'preservim/nerdtree'
-Plug 'Xuyuanp/nerdtree-git-plugin'
-Plug 'tpope/vim-fugitive'
-Plug 'junegunn/gv.vim'
-Plug 'pangloss/vim-javascript'
-Plug 'leafgarland/typescript-vim'
-Plug 'rust-lang/rust.vim'
+  call plug#begin()
 
-call plug#end()
+  Plug 'tpope/vim-sensible'
+  Plug 'chriskempson/base16-vim'
+  Plug 'christoomey/vim-tmux-navigator'
+  Plug 'junegunn/fzf'
+  Plug 'junegunn/fzf.vim'
+  Plug 'terryma/vim-multiple-cursors'
+  Plug 'tpope/vim-commentary'
+  Plug 'preservim/nerdtree'
+  Plug 'Xuyuanp/nerdtree-git-plugin'
+  Plug 'tpope/vim-fugitive'
+  Plug 'junegunn/gv.vim'
+  Plug 'pangloss/vim-javascript'
+  Plug 'leafgarland/typescript-vim'
+  Plug 'rust-lang/rust.vim'
+  Plug 'vim-test/vim-test'
+  Plug 'neovim/nvim-lspconfig'
 
-" Use a new leader key
-let mapleader=','
+  call plug#end()
 
-" Disable arrow keys
-nnoremap <Up> <NOP>
-nnoremap <Down> <NOP>
-nnoremap <Left> <NOP>
-nnoremap <Right> <NOP>
+  " Use a new leader key
+  let mapleader=','
 
-" Sane defaults
-set number
-set nobackup
-set expandtab
-set softtabstop=2
-set shiftwidth=2
-set shiftround
-set clipboard^=unnamedplus
+  " Disable arrow keys
+  nnoremap <Up> <NOP>
+  nnoremap <Down> <NOP>
+  nnoremap <Left> <NOP>
+  nnoremap <Right> <NOP>
 
-" Enable Python extensions
-let g:python3_host_prog = '~/.pyenv/versions/py3nvim/bin/python'
+  " Sane defaults
+  set number
+  set nobackup
+  set expandtab
+  set softtabstop=2
+  set shiftwidth=2
+  set shiftround
+  set clipboard^=unnamedplus
 
-" Theme
-if filereadable(expand("~/.vimrc_background"))
-  let base16colorspace=256
-  source ~/.vimrc_background
+  " Enable Python extensions
+  let g:python3_host_prog = '~/.pyenv/versions/py3nvim/bin/python'
+
+  " Theme
+  if filereadable(expand("~/.vimrc_background"))
+    let base16colorspace=256
+    source ~/.vimrc_background
+  endif
+
+  " Turn off search highlights
+  nnoremap <Leader>x :<C-u>nohlsearch<CR>
+
+  " FZF
+  nnoremap <C-p> :<C-u>FZF<CR>
+  nnoremap <Leader><Leader> :Files<cr>
+  nmap <leader><tab> <plug>(fzf-maps-n)
+
+  " NERDTree
+  map <Leader>n :NERDTreeToggle<CR>
+  let NERDTreeShowHidden=1
+  let NERDTreeQuitOnOpen=1
+
+  " vim-javascript settings
+  let g:javascript_conceal_function       = "ƒ"
+  let g:javascript_conceal_null           = "ø"
+  let g:javascript_conceal_arrow_function = "⇒"
+  set conceallevel=1
+
+  " vim-test
+  let test#strategy = "neovim"
+  nmap <silent> <Leader>t<C-n> :TestNearest<CR>
+  nmap <silent> <Leader>t<C-f> :TestFile<CR>
+  nmap <silent> <Leader>t<C-s> :TestSuite<CR>
+  nmap <silent> <Leader>t<C-l> :TestLast<CR>
+  nmap <silent> <Leader>t<C-g> :TestVisit<CR>
+
+" lsp
+lua << EOF
+require'lspconfig'.pyls.setup{}
+EOF
+
 endif
-
-" Turn off search highlights
-nnoremap <Leader>x :<C-u>nohlsearch<CR>
-
-" FZF
-nnoremap <C-p> :<C-u>FZF<CR>
-nnoremap <Leader><Leader> :Files<cr>
-nmap <leader><tab> <plug>(fzf-maps-n)
-
-" NERDTree
-map <Leader>n :NERDTreeToggle<CR>
-let NERDTreeShowHidden=1
-let NERDTreeQuitOnOpen=1
-
-" vim-javascript settings
-let g:javascript_conceal_function       = "ƒ"
-let g:javascript_conceal_null           = "ø"
-let g:javascript_conceal_arrow_function = "⇒"
-set conceallevel=1
