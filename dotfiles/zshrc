@@ -153,6 +153,11 @@ add-zsh-hook chpwd load-nvmrc
 load-nvmrc
 
 # ---------------------------
+# Julia
+# ---------------------------
+PATH="$HOME/tools/julia/julia-1.5.3/bin:$PATH"
+
+# ---------------------------
 # Rust
 # ---------------------------
 PATH="$HOME/.cargo/bin:$PATH"
