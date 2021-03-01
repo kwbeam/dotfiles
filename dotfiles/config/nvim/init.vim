@@ -7,6 +7,8 @@ else
   call plug#begin()
 
   Plug 'tpope/vim-sensible'
+  Plug 'vim-airline/vim-airline'
+  Plug 'vim-airline/vim-airline-themes'
   Plug 'chriskempson/base16-vim'
   Plug 'christoomey/vim-tmux-navigator'
   Plug 'junegunn/fzf'
@@ -47,10 +49,13 @@ else
   let g:python3_host_prog = '~/.pyenv/versions/py3nvim/bin/python'
 
   " Theme
-  if filereadable(expand("~/.vimrc_background"))
-    let base16colorspace=256
-    source ~/.vimrc_background
-  endif
+  " OLD:
+  " if filereadable(expand("~/.vimrc_background"))
+  "   let base16colorspace=256
+  "   source ~/.vimrc_background
+  " endif
+  " Airline Theme:
+  let g:airline_theme='minimalist'
 
   " Turn off search highlights
   nnoremap <Leader>x :<C-u>nohlsearch<CR>
