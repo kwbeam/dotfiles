@@ -86,7 +86,9 @@ else
 
 " lsp
 lua << EOF
-require'lspconfig'.pyls.setup{}
+require'lspconfig'.pyls.setup{
+  configurationSources = {'flake8'}
+}
 EOF
 
 endif
