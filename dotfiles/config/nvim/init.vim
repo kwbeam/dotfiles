@@ -13,23 +13,27 @@ else
   Plug 'vim-airline/vim-airline-themes'
 
   " Powerups
-  Plug 'christoomey/vim-tmux-navigator'
   Plug 'junegunn/fzf'
   Plug 'junegunn/fzf.vim'
-  Plug 'terryma/vim-multiple-cursors'
-  Plug 'tpope/vim-commentary'
   Plug 'preservim/nerdtree'
   Plug 'Xuyuanp/nerdtree-git-plugin'
-  Plug 'tpope/vim-fugitive'
+  Plug 'tpope/vim-commentary'
+  Plug 'christoomey/vim-tmux-navigator'
+  Plug 'mg979/vim-visual-multi'
+
+  " Development tools
   Plug 'junegunn/gv.vim'
+  Plug 'tpope/vim-fugitive'
+  Plug 'vim-test/vim-test'
+  Plug 'puremourning/vimspector'
 
   " Languages
   Plug 'pangloss/vim-javascript'
   Plug 'leafgarland/typescript-vim'
   Plug 'rust-lang/rust.vim'
+  Plug 'JuliaEditorSupport/julia-vim'
 
   " LSP
-  Plug 'vim-test/vim-test'
   Plug 'neovim/nvim-lspconfig'
   Plug 'hrsh7th/nvim-compe'
 
