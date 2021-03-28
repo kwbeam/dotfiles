@@ -1,12 +1,6 @@
-{%@@ if profile == "hornburg" @@%}
-[user]
-	name = Kevin Beam
-	email = kwbeam@fastmail.com
-{%@@ elif profile == "nsidc-kbeam-484" @@%}
 [user]
 	name = Kevin Beam
 	email = kbeam@nsidc.org
-{%@@ endif @@%}
 [color]
 	ui = auto
 [apply]
@@ -14,7 +8,6 @@
 [core]
 	autocrlf = input
 	safecrlf = false
-	excludesfile = ~/.gitignore
 [alias]
         st = status
         sts = status --short
