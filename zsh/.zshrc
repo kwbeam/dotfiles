@@ -84,12 +84,6 @@ alias vim=nvim
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
-# Base16 Shell
-BASE16_SHELL="$HOME/.config/base16-shell/"
-[ -n "$PS1" ] && \
-    [ -s "$BASE16_SHELL/profile_helper.sh" ] && \
-        eval "$("$BASE16_SHELL/profile_helper.sh")"
-
 # Workaround for git / pyenv conflict
 export GIT_INTERNAL_GETTEXT_TEST_FALLBACKS=1
 
@@ -167,14 +161,11 @@ PATH="$HOME/.cargo/bin:$PATH"
 # ---------------------------
 PATH=$PATH:/usr/local/go/bin
 
-{%@@ if profile == "hornburg" @@%}
 # ---------------------------
 # VASM
 # ---------------------------
 PATH=$PATH:$HOME/tools/vasm/vasm
-{%@@ endif @@%}
 
-{%@@ if profile == "nsidc-kbeam-484" @@%}
 # ---------------------------
 # Kubernetes completion
 # ---------------------------
@@ -184,7 +175,6 @@ source <(kubectl completion zsh)
 # PulseSecure VPN Client
 # ---------------------------
 export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/usr/local/pulse
-{%@@ endif @@%}
 
 # ---------------------------
 # Activate pyenv
