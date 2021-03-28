@@ -68,7 +68,7 @@ ZSH_THEME="simple"
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(aws dotenv git poetry pyenv)
+plugins=(aws dotenv git pyenv)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -149,7 +149,7 @@ load-nvmrc
 # ---------------------------
 # Julia
 # ---------------------------
-PATH="$HOME/tools/julia/julia-1.5.3/bin:$PATH"
+PATH="$HOME/tools/julia/julia-1.6.0/bin:$PATH"
 
 # ---------------------------
 # Rust
