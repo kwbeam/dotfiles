@@ -110,9 +110,11 @@ fi
 # Python: pyenv
 # ---------------------------
 export PYENV_ROOT="$HOME/.pyenv"
+# TODO: Already on path
 PATH="$PYENV_ROOT/bin:$PATH"
 export PYENV_VIRTUALENV_DISABLE_PROMPT=0
 export PYENV_VIRTUALENV_VERBOSE_ACTIVATE=1
+source $(pyenv root)/completions/pyenv.zsh
 # Note: pyenv is activated at the end of the script
 
 # Poetry
