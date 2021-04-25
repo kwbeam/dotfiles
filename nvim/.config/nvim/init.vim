@@ -29,9 +29,10 @@ else
 
   " Languages
   Plug 'pangloss/vim-javascript'
-  Plug 'leafgarland/typescript-vim'
-  Plug 'rust-lang/rust.vim'
   Plug 'JuliaEditorSupport/julia-vim'
+  Plug 'rudrab/vimf90'
+  Plug 'rust-lang/rust.vim'
+  Plug 'leafgarland/typescript-vim'
 
   " LSP
   Plug 'neovim/nvim-lspconfig'
@@ -95,6 +96,11 @@ else
 " lsp
 lua << EOF
 local lspconfig = require'lspconfig'
+
+lspconfig.fortls.setup{}
+
+lspconfig.julials.setup{}
+
 lspconfig.pyls.setup{
   settings = {
     pyls = {
@@ -111,6 +117,7 @@ lspconfig.pyls.setup{
     }
   }
 }
+
 EOF
 
 " LSP config (the mappings used in the default file don't quite work right)
