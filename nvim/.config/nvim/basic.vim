@@ -95,7 +95,17 @@ let g:node_host_prog = expand("~/.nvm/versions/node/v12.18.3/bin/node")
 
 " Theme
 colorscheme apprentice
+
+" Airline
 let g:airline_theme='minimalist'
+" enable tabline
+let g:airline#extensions#tabline#enabled = 1
+
+" enable powerline fonts
+let g:airline_powerline_fonts = 1
+
+" Always show tabs
+set showtabline=2
 
 " Turn off search highlights
 nnoremap <Leader>x :<C-u>nohlsearch<CR>
