@@ -75,6 +75,14 @@ if !has('nvim') && &ttimeoutlen == -1
   set ttimeoutlen=100
 endif
 
+" Keep selection when tabbing / de-tabbing
+vnoremap < <gv
+vnoremap > >gv
+
+" C-u to uppercase word
+inoremap <c-u> <ESC>viwUi
+nnoremap <c-u> viwU<ESC>
+
 " Disable arrow keys
 nnoremap <Up> <NOP>
 nnoremap <Down> <NOP>
