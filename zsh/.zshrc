@@ -82,6 +82,7 @@ PATH=$PATH:~/.local/bin
 export VISUAL="nvim"
 alias vim=nvim
 
+PATH=$PATH:~/tools/fzf/bin
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
 # Workaround for git / pyenv conflict
@@ -92,13 +93,14 @@ export DISABLE_AUTO_TITLE='true'
 # ---------------------------
 # Python: pyenv
 # ---------------------------
-export PYENV_ROOT="$HOME/.pyenv"
+# export PYENV_ROOT="$HOME/.pyenv"
 # TODO: Already on path
-PATH="$PYENV_ROOT/bin:$PATH"
+# PATH="$PYENV_ROOT/bin:$PATH"
 export PYENV_VIRTUALENV_DISABLE_PROMPT=0
 export PYENV_VIRTUALENV_VERBOSE_ACTIVATE=1
 source $(pyenv root)/completions/pyenv.zsh
 # Note: pyenv is activated at the end of the script
+#
 
 # Poetry
 PATH="$HOME/.poetry/bin:$PATH"
@@ -134,7 +136,7 @@ load-nvmrc
 # ---------------------------
 # Julia
 # ---------------------------
-PATH="$HOME/tools/julia/julia-1.6.0/bin:$PATH"
+PATH="$HOME/tools/julia/julia-1.6.1/bin:$PATH"
 
 # ---------------------------
 # Rust
@@ -154,7 +156,7 @@ PATH=$PATH:$HOME/tools/vasm/vasm
 # ---------------------------
 # Activate pyenv
 # ---------------------------
-eval "$(pyenv init -)"
+eval "$(pyenv init --path)"
 eval "$(pyenv virtualenv-init -)"
 
 export PATH
