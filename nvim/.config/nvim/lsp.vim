@@ -2,26 +2,28 @@
 lua << EOF
 local lspconfig = require'lspconfig'
 
+--[[
+  Fortran
+    pip: pip install fortran-language-server
+  https://github.com/hansec/fortran-language-server
+--]]
 lspconfig.fortls.setup{}
 
+--[[
+  Julia
+    using Pkg
+    Pkg.add("LanguageServer")
+  https://github.com/julia-vscode/LanguageServer.jl
+--]]
 lspconfig.julials.setup{}
 
-lspconfig.pyls.setup{
-  settings = {
-    pyls = {
-      configurationSources = {'flake8'},
-      plugins = {
-        pydocstyle = {
-          enabled = true,
-        },
-        pyls_mypy = {
-          enabled = true,
-          live_mode = true,
-        }
-      }
-    }
-  }
-}
+--[[
+  Python
+    pip: pip install 'python-lsp-server[all]'
+    conda: conda install -c conda-forge python-lsp-server
+  https://github.com/python-lsp/python-lsp-server
+--]]
+lspconfig.pylsp.setup{}
 
 EOF
 
