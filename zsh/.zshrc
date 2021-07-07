@@ -8,7 +8,7 @@ export ZSH="$HOME/.oh-my-zsh"
 # load a random theme each time oh-my-zsh is loaded, in which case,
 # to know which specific one was loaded, run: echo $RANDOM_THEME
 # See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
-ZSH_THEME="simple"
+ZSH_THEME="af-magic"
 
 # Set list of themes to pick from when loading at random
 # Setting this variable when ZSH_THEME=random will cause zsh to load
@@ -68,7 +68,7 @@ ZSH_THEME="simple"
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(aws dotenv git pyenv)
+plugins=(git)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -93,14 +93,12 @@ export DISABLE_AUTO_TITLE='true'
 # ---------------------------
 # Python: pyenv
 # ---------------------------
-# export PYENV_ROOT="$HOME/.pyenv"
-# TODO: Already on path
-# PATH="$PYENV_ROOT/bin:$PATH"
+export PYENV_ROOT="$HOME/.pyenv"
+export PATH="$PYENV_ROOT/bin:$PATH"
 export PYENV_VIRTUALENV_DISABLE_PROMPT=0
 export PYENV_VIRTUALENV_VERBOSE_ACTIVATE=1
-source $(pyenv root)/completions/pyenv.zsh
+eval "$(pyenv init --path)"
 # Note: pyenv is activated at the end of the script
-#
 
 # Poetry
 PATH="$HOME/.poetry/bin:$PATH"
@@ -156,7 +154,7 @@ PATH=$PATH:$HOME/tools/vasm/vasm
 # ---------------------------
 # Activate pyenv
 # ---------------------------
-eval "$(pyenv init --path)"
+eval "$(pyenv init -)"
 eval "$(pyenv virtualenv-init -)"
 
 export PATH
